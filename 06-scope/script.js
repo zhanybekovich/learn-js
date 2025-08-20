@@ -1,32 +1,21 @@
 "use strict";
 
-/**
- * Scoping: how our programs's variables are organized and accessed.
- *
- * Lexical scoping: scoping is controlled by placement of functions and blocks in the code
- *
- * Scope: space or environment in which a certain variable is declared.
- * There is global scope, function scope, and block scope.
- */
+function calcAge(birthYear) {
+  const age = 2025 - birthYear;
 
-// global
-const user = "john";
+  function printAge() {
+    const output = `You are ${age}, born in ${birthYear}`;
+    console.log(output);
 
-// function scope
-function myFunc() {
-  // functions have access to vars in global scope
-  console.log(user);
+    if (birthYear >= 1991 && birthYear <= 1996) {
+      const str = `Oh, and you're a millenial, ${firstName}`;
+      console.log(str);
+    }
+  }
+  printAge();
 
-  const myFuncScopedVar = "test";
+  return age;
 }
 
-// this is error
-// console.log(myFuncScopedVar);
-
-// block scope
-if (true) {
-  const iamInBlockScope = "me";
-}
-
-// this is also error
-// console.log(iamInBlockScope);
+const firstName = "John";
+calcAge(1991);
