@@ -6,7 +6,7 @@
 
 // Data
 const account1 = {
-  owner: "John Doe",
+  owner: "John Smith",
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -105,9 +105,29 @@ const createUserNames = function (accs) {
   });
 };
 
-const user = "Steven Thomas Williams";
-
 createUserNames(accounts);
+
+let currentAccount;
+btnLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    (acc) => acc.username === inputLoginUsername.value
+  );
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    labelWelcome.textContent = `Welcome back ${
+      currentAccount.owner.split(" ")[0]
+    }`;
+    containerApp.style.opacity = 100;
+    inputLoginUsername.value = inputLoginPin.value = "";
+    inputLoginPin.blur();
+
+    displayMovements(currentAccount.movements);
+    calcDisplaySummary(currentAccount);
+    calcPrintBalance(currentAccount.movements);
+  }
+});
 
 const deposits = movements.filter((mov) => mov > 0);
 const withdrawals = movements.filter((mov) => mov < 0);
@@ -118,18 +138,16 @@ const calcPrintBalance = function (movements) {
   labelBalance.textContent = `${balance} €`;
 };
 
-calcPrintBalance(account1.movements);
-
 const eurToUsd = 1.1;
 
-const calcDisplaySummary = function (movements) {
-  const incomes = movements
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov);
 
   labelSumIn.textContent = `${incomes}€`;
 
-  const out = movements
+  const out = acc.movements
     .filter((mov) => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
 
@@ -137,14 +155,9 @@ const calcDisplaySummary = function (movements) {
 
   const interest = movements
     .filter((mov) => mov > 0)
-    .map((deposit) => (deposit * 1.2) / 100)
+    .map((deposit) => (deposit * acc.interestRate) / 100)
     .filter((item) => item >= 1)
     .reduce((acc, cur) => acc + cur);
 
   labelSumInterest.textContent = `${interest}€`;
 };
-
-calcDisplaySummary(account1.movements);
-
-const account = accounts.find((account) => account.owner === "Jessica Davis");
-console.log(account);
