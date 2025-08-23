@@ -95,9 +95,17 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-const eurToUsd = 1.1;
+const createUserNames = function (accs) {
+  accs.forEach((acc) => {
+    acc.username = acc.owner
+      .toLocaleLowerCase()
+      .split(" ")
+      .map((word) => word[0])
+      .join("");
+  });
+};
 
-const movementsUSD = movements.map((mov) => {
-  return mov * eurToUsd;
-});
-console.log(movementsUSD);
+const user = "Steven Thomas Williams";
+
+createUserNames(accounts);
+console.log(accounts);
