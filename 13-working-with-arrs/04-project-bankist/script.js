@@ -115,7 +115,33 @@ const withdrawals = movements.filter((mov) => mov < 0);
 const calcPrintBalance = function (movements) {
   const balance = movements.reduce((acc, cur) => (acc += cur), 0);
 
-  labelBalance.textContent = `${balance} EUR`;
+  labelBalance.textContent = `${balance} €`;
 };
 
 calcPrintBalance(account1.movements);
+
+const eurToUsd = 1.1;
+
+const calcDisplaySummary = function (movements) {
+  const incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov);
+
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  const interest = movements
+    .filter((mov) => mov > 0)
+    .map((deposit) => (deposit * 1.2) / 100)
+    .filter((item) => item >= 1)
+    .reduce((acc, cur) => acc + cur);
+
+  labelSumInterest.textContent = `${interest}€`;
+};
+
+calcDisplaySummary(account1.movements);
