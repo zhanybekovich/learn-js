@@ -217,11 +217,18 @@ btnClose.addEventListener("click", function (e) {
   inputCloseUsername.value = inputClosePin.value = "";
 });
 
-console.log(movements.includes(-130));
+// flat
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
 
-// some
-const anyDeposits = movements.some((mov) => mov > 5000);
-console.log(anyDeposits);
+const arrDeep = [
+  [[1, 2], 3],
+  [4, [5, 6, [7, 8]]],
+];
+console.log(arrDeep.flat(3));
 
-// every
-console.log(movements.every((mov) => mov > 0));
+// flatMap
+const overallBalance = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((acc, cur) => acc + cur, 0);
+console.log(overallBalance);
