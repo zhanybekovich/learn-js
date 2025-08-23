@@ -94,3 +94,10 @@ const displayMovements = function (movements) {
 };
 
 displayMovements(account1.movements);
+
+const eurToUsd = 1.1;
+
+const movementsUSD = movements.map((mov) => {
+  return mov * eurToUsd;
+});
+console.log(movementsUSD);
