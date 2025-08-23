@@ -111,4 +111,11 @@ createUserNames(accounts);
 
 const deposits = movements.filter((mov) => mov > 0);
 const withdrawals = movements.filter((mov) => mov < 0);
-console.log(deposits, withdrawals);
+
+const calcPrintBalance = function (movements) {
+  const balance = movements.reduce((acc, cur) => (acc += cur), 0);
+
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcPrintBalance(account1.movements);
