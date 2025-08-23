@@ -145,3 +145,6 @@ const calcDisplaySummary = function (movements) {
 };
 
 calcDisplaySummary(account1.movements);
+
+const account = accounts.find((account) => account.owner === "Jessica Davis");
+console.log(account);
