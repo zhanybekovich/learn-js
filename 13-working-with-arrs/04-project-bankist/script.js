@@ -108,4 +108,7 @@ const createUserNames = function (accs) {
 const user = "Steven Thomas Williams";
 
 createUserNames(accounts);
-console.log(accounts);
+
+const deposits = movements.filter((mov) => mov > 0);
+const withdrawals = movements.filter((mov) => mov < 0);
+console.log(deposits, withdrawals);
