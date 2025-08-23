@@ -185,5 +185,19 @@ btnTransfer.addEventListener("click", function (e) {
   }
 });
 
-const deposits = movements.filter((mov) => mov > 0);
-const withdrawals = movements.filter((mov) => mov < 0);
+btnClose.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      (acc) => acc.username === currentAccount.username
+    );
+    accounts.splice(index, 1);
+    containerApp.style.opacity = 0;
+  }
+
+  inputCloseUsername.value = inputClosePin.value = "";
+});
