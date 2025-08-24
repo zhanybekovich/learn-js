@@ -75,10 +75,12 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = "";
 
-  movements.forEach(function (mov, i) {
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
 
     const html = `
@@ -217,18 +219,18 @@ btnClose.addEventListener("click", function (e) {
   inputCloseUsername.value = inputClosePin.value = "";
 });
 
-// flat
-const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
-console.log(arr.flat());
+let sorted = false;
+btnSort.addEventListener("click", function (e) {
+  e.preventDefault();
 
-const arrDeep = [
-  [[1, 2], 3],
-  [4, [5, 6, [7, 8]]],
-];
-console.log(arrDeep.flat(3));
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+});
 
-// flatMap
-const overallBalance = accounts
-  .flatMap((acc) => acc.movements)
-  .reduce((acc, cur) => acc + cur, 0);
-console.log(overallBalance);
+// sort: mutates original array
+const owners = ["John", "Zuch", "Bob"];
+console.log(owners.sort());
+
+// compare sort function: return < 0 => A, B else if return > 0 => B, A
+console.log(movements.sort((a, b) => a - b));
+console.log(movements.sort((a, b) => b - a));
