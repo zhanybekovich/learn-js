@@ -259,3 +259,20 @@ console.log(groupedByActivity);
 
 const groupedByType = Object.groupBy(accounts, ({ type }) => type);
 console.log(groupedByType);
+
+// more ways of filling  arrays
+// generating array programmatically
+const x = new Array(7); // creates array with 7 empty
+// x.fill(1); // fills arr with 1s
+x.fill(1, 3); //  [empty × 3, 1, 1, 1, 1]
+console.log(x);
+
+// array from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (cur, i) => i + 1);
+console.log(z);
+
+const zz = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(zz);
