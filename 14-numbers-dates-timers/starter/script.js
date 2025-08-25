@@ -348,3 +348,21 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
+
+console.log('=======');
+
+/**
+ * Numeric Separator
+ */
+
+// adding separator
+const diameter = 287_460_000_000;
+console.log(diameter);
+
+// restrictions
+// const PI = 3._1415 // error
+// const PI = 3.__1415 // error
+
+// converting errors
+console.log(Number('23_000_000')); // NaN
+console.log(parseInt('230_000')); // 230
