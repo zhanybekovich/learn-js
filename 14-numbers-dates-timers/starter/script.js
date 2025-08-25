@@ -370,14 +370,24 @@ btnSort.addEventListener('click', function (e) {
 });
 
 /**
- * Operations with dates
+ * Internationalizing Dates
  */
 
-const future = new Date(2026, 10, 19, 15, 23);
+const today = new Date();
 
-const daysPassed = (date1, date2) =>
-  Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
+const options = {
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'long', // 'numeric, 2-digit, long
+  year: 'numeric', // numeric, 2-digit
+  weekday: 'long',
+};
 
-const days1 = daysPassed(new Date(2026, 3, 14), new Date(2026, 3, 24));
+// getting locale
+const locale = navigator.language;
 
-console.log(days1);
+console.log(locale);
+
+// formatting
+console.log(new Intl.DateTimeFormat(locale, options).format(today));
