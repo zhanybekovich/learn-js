@@ -366,3 +366,30 @@ console.log(diameter);
 // converting errors
 console.log(Number('23_000_000')); // NaN
 console.log(parseInt('230_000')); // 230
+
+console.log('==========');
+
+/**
+ * BigInt
+ */
+
+// safe integer
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+
+console.log(646546546165149461654616549461654654n);
+console.log(BigInt(93285923485233434573295734985739));
+
+// operations
+console.log(10000n + 10000n);
+console.log(10000n - 10000n);
+console.log(10000n * 10000n);
+console.log(10000n / 10000n);
+console.log(10n / 3n);
+
+console.log(20n > 10);
+console.log(20n < 10);
+console.log(20n === 20); // false
+console.log(20n == 20); // true
+
+console.log(20n + 'hello'); // 20hello
