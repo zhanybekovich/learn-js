@@ -292,3 +292,58 @@ console.log(reversedMovs2);
 const newMovements = movements.with(1, 2000);
 console.log(movements);
 console.log(newMovements);
+
+console.log("===========");
+
+const bankDepositSum = accounts
+  .flatMap((acc) => acc.movements)
+  .filter((mov) => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+
+console.log(bankDepositSum);
+
+console.log("==========");
+
+// const numDeposits1000 = accounts
+//   .flatMap((acc) => acc.movements)
+//   .filter((mov) => mov >= 1000).length;
+
+const numDeposits1000 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+console.log(numDeposits1000);
+
+console.log("===========");
+
+const { deposits, withdrawals } = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce(
+    (sum, cur) => {
+      cur > 0 ? (sum.deposits += cur) : (sum.withdrawals += cur);
+
+      return sum;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+
+console.log(deposits, withdrawals);
+
+console.log("===========");
+
+function convertTitleCase(title) {
+  const exceptions = ["a", "an", "and", "the", "but", "or", "on", "in", "with"];
+
+  const capitalize = (str) => str[0].toUpperCase() + str.slice(1);
+
+  const titleCase = title
+    .toLocaleLowerCase()
+    .split(" ")
+    .map((word) => (exceptions.includes(word) ? word : capitalize(word)))
+    .join(" ");
+
+  return titleCase;
+}
+
+console.log(convertTitleCase("this is a nice title"));
+console.log(convertTitleCase("this is a long but not too long title"));
+console.log(convertTitleCase("this is an another title example"));
