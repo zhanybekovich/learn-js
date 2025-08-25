@@ -276,3 +276,19 @@ console.log(z);
 
 const zz = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(zz);
+
+console.log("=======");
+// reverse => destructive
+console.log(movements);
+const reversedMovs = movements.reverse();
+console.log(reversedMovs);
+console.log(movements);
+
+// nondestructive toReversed, toSorted, toSpliced
+const reversedMovs2 = movements.toReversed();
+console.log(reversedMovs2);
+
+// nondestructive
+const newMovements = movements.with(1, 2000);
+console.log(movements);
+console.log(newMovements);
