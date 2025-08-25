@@ -393,3 +393,39 @@ console.log(20n === 20); // false
 console.log(20n == 20); // true
 
 console.log(20n + 'hello'); // 20hello
+
+console.log('==========');
+
+/**
+ * Dates and Time
+ */
+
+// create a date
+const now = new Date();
+console.log(now);
+
+// parse date from string
+console.log(new Date('Mon Aug 25 2025 17:06:13 GMT+0600'));
+console.log(new Date('December 24, 2015'));
+console.log(new Date('2019-11-18T21:31:17.178Z'));
+console.log(new Date(2025, 10, 19, 15, 23, 5));
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+// methods
+const future = new Date(2030, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getHours());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+console.log(Date.now());
+
+future.setFullYear(2024);
+future.setMonth(11);
+future.setHours(11);
+console.log(future);
