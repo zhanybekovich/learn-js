@@ -441,7 +441,27 @@ const pizzaTimer = setTimeout(
 if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 
 // setInterval
-setInterval(function () {
-  const now = new Date();
-  console.log(now);
-}, 1000);
+// setInterval(function () {
+//   const now = new Date();
+//   console.log(now);
+// }, 1000);
+
+console.log('=========');
+
+const startLogOutTimer2 = function () {
+  let time = 10;
+
+  const timer = setInterval(function () {
+    const min = String(Math.trunc(time / 60)).padStart(2, '0');
+    const sec = String(time % 60).padStart(2, '0');
+    console.log(`${min}:${sec}`);
+
+    if (time <= 0) {
+      clearInterval(timer);
+    }
+
+    time--;
+  }, 1000);
+};
+
+startLogOutTimer2();
