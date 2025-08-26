@@ -30,50 +30,28 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+
+  // basic scrolling
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // old school smooth scrolling
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  // new way
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
 ///////////////////////////////
 ///////////////////////////////
-
-/**
- * Styles, Attributes, Classes
- */
-const h1 = document.createElement('h1');
-h1.textContent = 'Hello';
-
-// setting inline styles
-h1.style.color = 'blue';
-h1.style.backgroundColor = 'green';
-
-document.querySelector('.header__title').before(h1);
-
-// get style
-console.log(getComputedStyle(h1).color);
-console.log(getComputedStyle(h1).height);
-
-h1.style.height = parseFloat(getComputedStyle(h1).height) + 40 + 'px';
-console.log(getComputedStyle(h1).height);
-
-// working with custom properties
-// document.documentElement.style.setProperty('--color-primary', 'orange');
-
-// attributes
-const logo = document.querySelector('.nav__logo');
-console.log(logo.src);
-console.log(logo.alt);
-console.log(logo.className);
-
-// set attribute
-logo.setAttribute('alt', 'this is alt');
-console.log(logo.alt);
-
-// get attribute
-console.log(logo.getAttribute('src'));
-
-// data attributes
-logo.dataset.hello = 'my custom data-set attribute';
-console.log(logo.dataset.hello);
-
-// classes
-logo.classList.add('test');
-logo.classList.remove('test');
-logo.classList.toggle('test');
-logo.classList.contains('test');
