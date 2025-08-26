@@ -57,24 +57,27 @@ btnScrollTo.addEventListener('click', function (e) {
 ///////////////////////////////
 
 /**
- * Types of Events and Event Handlers
+ * Event Propagation
  */
-const h1 = document.querySelector('h1');
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1));
 
-// h1.addEventListener('mouseenter', function () {
-//   console.log('mouseenter');
-// });
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
 
-// by attribute: don't use it
-// h1.onmouseenter = function () {
-//   console.log('mouseenter');
-// };
+document.querySelector('.nav__link').addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log('link', e.target);
 
-// remove listener
-function log() {
-  console.log('mouseenter');
+  // stop propagation
+  e.stopPropagation();
+});
 
-  h1.removeEventListener('mouseenter', log);
-}
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log('container', e.target);
+});
 
-h1.addEventListener('mouseenter', log);
+document.querySelector('.nav').addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log('nav', e.target);
+});
