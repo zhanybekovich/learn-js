@@ -391,3 +391,23 @@ console.log(locale);
 
 // formatting
 console.log(new Intl.DateTimeFormat(locale, options).format(today));
+
+console.log('=========');
+
+/**
+ * Internationalizing Numbers
+ */
+
+const num = 3884764.23;
+
+const numFormatOptions = {
+  style: 'currency', //unit, percent, currency
+  currency: 'EUR',
+  useGrouping: true,
+};
+
+console.log(new Intl.NumberFormat('de-DE', numFormatOptions).format(num));
+console.log(new Intl.NumberFormat('en-US', numFormatOptions).format(num));
+console.log(new Intl.NumberFormat('ru-RU', numFormatOptions).format(num));
+console.log(new Intl.NumberFormat('ky-KG', numFormatOptions).format(num));
+console.log(new Intl.NumberFormat('en-UK', numFormatOptions).format(num));
