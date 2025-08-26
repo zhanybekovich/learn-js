@@ -411,3 +411,37 @@ console.log(new Intl.NumberFormat('en-US', numFormatOptions).format(num));
 console.log(new Intl.NumberFormat('ru-RU', numFormatOptions).format(num));
 console.log(new Intl.NumberFormat('ky-KG', numFormatOptions).format(num));
 console.log(new Intl.NumberFormat('en-UK', numFormatOptions).format(num));
+
+console.log('================');
+
+/**
+ * Timers
+ */
+
+// timeout
+setTimeout(() => console.log('Here is your pizza 🍕'), 3000);
+console.log('Waiting...');
+
+// passing arguments
+setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza 🍕 with ${ing1} and ${ing2}`),
+  3000,
+  'olives',
+  'spinach'
+);
+
+// clear timeout
+const ingredients = ['olives', 'spinach'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza 🍕 with ${ing1} and ${ing2}`),
+  3000,
+  ...ingredients
+);
+
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+
+// setInterval
+setInterval(function () {
+  const now = new Date();
+  console.log(now);
+}, 1000);
