@@ -63,3 +63,38 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 
 ///////////////////////////////
 ///////////////////////////////
+
+/**
+ * Dom Traversing
+ */
+
+const h1 = document.querySelector('h1');
+
+// getting children
+console.log(h1.querySelectorAll('.highlight'));
+
+// direct children
+console.log(h1.childNodes);
+console.log(h1.children);
+
+// first, last
+console.log(h1.firstElementChild);
+console.log(h1.lastElementChild);
+
+// parent
+console.log(h1.parentNode);
+console.log(h1.parentElement);
+
+// closest
+console.log(h1.closest('.header'));
+
+// siblings
+console.log(h1.previousElementSibling);
+console.log(h1.nextElementSibling);
+
+// all siblings
+console.log(h1.parentElement.children);
+
+[...h1.parentElement.children].forEach(el => {
+  if (el !== h1) el.style.transform = 'scale(0.5)';
+});
