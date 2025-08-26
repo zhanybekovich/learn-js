@@ -61,40 +61,25 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 });
 
-///////////////////////////////
-///////////////////////////////
+// Tabbed components
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
 
-/**
- * Dom Traversing
- */
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
 
-const h1 = document.querySelector('h1');
+  if (!clicked) return;
 
-// getting children
-console.log(h1.querySelectorAll('.highlight'));
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  clicked.classList.add('operations__tab--active');
 
-// direct children
-console.log(h1.childNodes);
-console.log(h1.children);
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
 
-// first, last
-console.log(h1.firstElementChild);
-console.log(h1.lastElementChild);
-
-// parent
-console.log(h1.parentNode);
-console.log(h1.parentElement);
-
-// closest
-console.log(h1.closest('.header'));
-
-// siblings
-console.log(h1.previousElementSibling);
-console.log(h1.nextElementSibling);
-
-// all siblings
-console.log(h1.parentElement.children);
-
-[...h1.parentElement.children].forEach(el => {
-  if (el !== h1) el.style.transform = 'scale(0.5)';
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
 });
+
+///////////////////////////////
+///////////////////////////////
