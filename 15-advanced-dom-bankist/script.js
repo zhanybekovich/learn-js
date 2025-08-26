@@ -55,3 +55,26 @@ btnScrollTo.addEventListener('click', function (e) {
 
 ///////////////////////////////
 ///////////////////////////////
+
+/**
+ * Types of Events and Event Handlers
+ */
+const h1 = document.querySelector('h1');
+
+// h1.addEventListener('mouseenter', function () {
+//   console.log('mouseenter');
+// });
+
+// by attribute: don't use it
+// h1.onmouseenter = function () {
+//   console.log('mouseenter');
+// };
+
+// remove listener
+function log() {
+  console.log('mouseenter');
+
+  h1.removeEventListener('mouseenter', log);
+}
+
+h1.addEventListener('mouseenter', log);
