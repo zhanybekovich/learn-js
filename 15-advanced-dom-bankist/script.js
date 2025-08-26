@@ -34,43 +34,46 @@ document.addEventListener('keydown', function (e) {
 ///////////////////////////////
 
 /**
- * Select, Create, Delete Elements
+ * Styles, Attributes, Classes
  */
-
-// document
-console.log(document.documentElement);
-console.log(document.head);
-console.log(document.body);
-
-// searching
-document.querySelector('.heading');
-const allSections = document.querySelectorAll('.section');
-console.log(allSections);
-
-// element by id
-console.log(document.getElementById('section--1'));
-
-// by tag name
-console.log(document.getElementsByTagName('button'));
-
-// elements by class name
-console.log(document.getElementsByClassName('btn'));
-
-// create element
 const h1 = document.createElement('h1');
 h1.textContent = 'Hello';
-h1.className = 'h1';
-console.log(h1);
 
-// inserting element into the page
-// document.querySelector('.header__title').appendChild(h1);
-// document.querySelector('.header__title').append(h1);
-// document.querySelector('.header__title').prepend(h1);
-// document.querySelector('.header__title').append(h1.cloneNode(true));
+// setting inline styles
+h1.style.color = 'blue';
+h1.style.backgroundColor = 'green';
+
 document.querySelector('.header__title').before(h1);
-document.querySelector('.header__title').after(h1);
 
-// delete element
-h1.addEventListener('click', function () {
-  h1.remove();
-});
+// get style
+console.log(getComputedStyle(h1).color);
+console.log(getComputedStyle(h1).height);
+
+h1.style.height = parseFloat(getComputedStyle(h1).height) + 40 + 'px';
+console.log(getComputedStyle(h1).height);
+
+// working with custom properties
+// document.documentElement.style.setProperty('--color-primary', 'orange');
+
+// attributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.src);
+console.log(logo.alt);
+console.log(logo.className);
+
+// set attribute
+logo.setAttribute('alt', 'this is alt');
+console.log(logo.alt);
+
+// get attribute
+console.log(logo.getAttribute('src'));
+
+// data attributes
+logo.dataset.hello = 'my custom data-set attribute';
+console.log(logo.dataset.hello);
+
+// classes
+logo.classList.add('test');
+logo.classList.remove('test');
+logo.classList.toggle('test');
+logo.classList.contains('test');
