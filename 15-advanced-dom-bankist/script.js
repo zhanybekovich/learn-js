@@ -99,5 +99,14 @@ const nav = document.querySelector('.nav');
 
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
+
+// Sticky navigation
+// not efficient solution
+const initialCoords = section1.getBoundingClientRect();
+window.addEventListener('scroll', function (e) {
+  if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+});
+
 ///////////////////////////////
 ///////////////////////////////
