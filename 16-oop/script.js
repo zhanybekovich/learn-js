@@ -1,25 +1,23 @@
 "use strict";
 
 /**
- * What is OOP?
+ * OOP in JS
  *
- * We use objects to model real-world or abstract features
+ * Prototype -> contains methods
+ *    |
+ * Object -> can access methods
  *
- * Object may contain data (properties) and code (methods)
+ * Objects are linked to a prototype object;
  *
- * 4 principles of OOP:
- * 1. Abstraction -> Ignoring or hiding details that don't matter,
- *  allowing us to get and overview perspective of the thing we're
- *  implementing, instead of messing with details that don't really
- *  matter to our implementation.
+ * Prototypal inheritance: The prototype contains methods
+ * that are accessible to all objects linked to that prototype.
  *
- * 2. Encapsulation -> Keeping properties and methods private inside
- *  the class, so they are not accessible from outside the class.
- *  Some methods ca be exposed as a public interface (API)
+ * Behavior is delegated to the linked prototype
  *
- * 3. Inheritance -> Child class can inherit methods and properties
- *  prom parent class
+ * How to create new objects:
+ * 1. Constructor functions
  *
- * 4. Polymorphism -> A child class can overwrite a method
- *  it inherited from a parent class.
+ * 2. ES6 Classes
+ *
+ * 3. Object.create()
  */
