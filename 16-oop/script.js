@@ -121,10 +121,12 @@ class Account {
   // Public interface (API)
   deposit(val) {
     this.#movements.push(val);
+    return this;
   }
 
   withdraw(val) {
     this.deposit(-val);
+    return this;
   }
 
   // private method
@@ -136,6 +138,8 @@ class Account {
       this.deposit(val);
       console.log("Loan is approved!");
     }
+
+    return this;
   }
 
   getMovements() {
@@ -144,8 +148,12 @@ class Account {
 }
 
 const acc1 = new Account("John", "EUR", 1111);
-acc1.deposit(250);
-acc1.withdraw(140);
-acc1.requestLoan(5000);
+acc1
+  .deposit(300)
+  .withdraw(100)
+  .withdraw(50)
+  .requestLoan(25000)
+  .withdraw(4000)
+  .getMovements();
 
 console.log(acc1);
