@@ -36,6 +36,11 @@ class Person {
   get fullname() {
     return this._fullname;
   }
+
+  // static method. it is not accessible for instances
+  static hey() {
+    console.log("Hey there!");
+  }
 }
 
 const person1 = new Person("John Doe", 1995);
@@ -43,3 +48,6 @@ console.log(person1.fullname);
 
 const bob = new Person("Bob Marley", 1996);
 console.log(bob.fullname);
+
+// calling static method
+Person.hey();
