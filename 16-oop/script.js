@@ -1,32 +1,45 @@
 "use strict";
 
 /**
- * ES6 Classes
- * - Classes are not hoisted
- * - Classes are 1st class citizens
- * - Body of the class executed in strict mode
+ * Getters & Setters
  */
 
-class PersonCl {
-  constructor(firstName, birthYear) {
-    (this.firstName = firstName), (this.birthYear = birthYear);
+class Person {
+  constructor(fullname, birthYear) {
+    this.fullname = fullname;
+    this.birthYear = birthYear;
   }
 
-  // methods will be added to .prototype property
   calcAge() {
     console.log(2025 - this.birthYear);
   }
 
   greet() {
-    console.log(`Hey, this is ${this.firstName}.`);
+    console.log(`Hey ${this.fullname}`);
+  }
+
+  // getter
+  get age() {
+    return 2025 - this.birthYear;
+  }
+
+  // set a property that already exists with _
+  set fullname(name) {
+    if (name.includes(" ")) {
+      this._fullname = name;
+    } else {
+      console.log("The given name is not a fullname");
+    }
+  }
+
+  // getter
+  get fullname() {
+    return this._fullname;
   }
 }
 
-const person1 = new PersonCl("John", 1995);
-console.log(person1);
-person1.calcAge();
-person1.greet();
+const person1 = new Person("John Doe", 1995);
+console.log(person1.fullname);
 
-const person2 = new PersonCl("Bob", 2000);
-person2.calcAge();
-person2.greet();
+const bob = new Person("Bob Marley", 1996);
+console.log(bob.fullname);
