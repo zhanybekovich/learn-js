@@ -51,3 +51,20 @@ console.log(bob.fullname);
 
 // calling static method
 Person.hey();
+
+/**
+ * Object.create()
+ */
+
+const PersonProto = {
+  calcAge() {
+    console.log(new Date().getFullYear() - this.birthYear);
+  },
+};
+
+const steve = Object.create(PersonProto);
+console.log(steve);
+
+steve.name = "Steve";
+steve.birthYear = 1985;
+steve.calcAge();
