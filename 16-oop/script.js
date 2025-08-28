@@ -90,34 +90,56 @@ console.log("=============");
 
 //////////////////////////////
 
+/**
+ * Encapsulation: Private Class Fields and Methods
+ *
+ * 1. Public fields
+ * 2. Private fields
+ * 3. Public methods
+ * 4. Private methods
+ *
+ * Static version of the 1, 2, 3, 4
+ */
+
 class Account {
+  // public fields
+  locale = navigator.language;
+  bank = "SuperBank";
+
+  // private fields
+  #movements = [];
+  #pin;
+
   constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
-    this.pin = pin;
-    this.movements = [];
-    this.locale = navigator.language;
+    this.#pin = pin;
 
     console.log(`Thanks for opening an account, ${owner}`);
   }
 
   // Public interface (API)
   deposit(val) {
-    this.movements.push(val);
+    this.#movements.push(val);
   }
 
   withdraw(val) {
     this.deposit(-val);
   }
 
-  approveLoan(val) {
+  // private method
+  #approveLoan(val) {
     return true;
   }
   requestLoan(val) {
-    if (this.approveLoan(val)) {
+    if (this.#approveLoan(val)) {
       this.deposit(val);
       console.log("Loan is approved!");
     }
+  }
+
+  getMovements() {
+    return this.#movements;
   }
 }
 
@@ -125,4 +147,5 @@ const acc1 = new Account("John", "EUR", 1111);
 acc1.deposit(250);
 acc1.withdraw(140);
 acc1.requestLoan(5000);
+
 console.log(acc1);
