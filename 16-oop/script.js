@@ -1,44 +1,56 @@
 "use strict";
 
 /**
- * Inheritance challenge
+ * Inheritance in classes
  */
 
-const Car = function (make, speed) {
-  this.make = make;
-  this.speed = speed;
-};
+class Person {
+  constructor(fullname, birthYear) {
+    this.fullname = fullname;
+    this.birthYear = birthYear;
+  }
 
-Car.prototype.accelerate = function () {
-  this.speed += 10;
-  console.log(`${this.make} is going at ${this.speed} km/h`);
-};
+  calcAge() {
+    console.log(new Date().getFullYear() - this.birthYear);
+  }
 
-Car.prototype.brake = function () {
-  this.speed -= 5;
-  console.log(`${this.make} is going at ${this.speed} km/h`);
-};
+  greet() {
+    console.log(`Hello, I am ${this.fullname}`);
+  }
 
-const EV = function (make, speed, charge) {
-  Car.call(this, make, speed);
-  this.charge = charge;
-};
+  get age() {
+    return new Date().getFullYear() - this.birthYear;
+  }
 
-EV.prototype = Object.create(Car.prototype);
+  set fullname(name) {
+    if (name.includes(" ")) this._fullname = name;
+    else console.log("Name is not full name");
+  }
 
-EV.prototype.chargeBattery = function (chargeTo) {
-  this.charge = chargeTo;
-};
+  get fullname() {
+    return this._fullname;
+  }
+}
 
-EV.prototype.accelerate = function () {
-  this.speed += 20;
-  this.charge--;
-  console.log(
-    `${this.make} is going at ${this.speed} km/h with charge of ${this.charge}`
-  );
-};
-const tesla = new EV("Tesla", 120, 25);
-tesla.chargeBattery(90);
-tesla.accelerate();
-tesla.brake();
-console.log(tesla);
+class Student extends Person {
+  constructor(fullname, birthYear, course) {
+    super(fullname, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullname} and I study ${this.course}`);
+  }
+
+  // overriding parent method
+  calcAge() {
+    console.log(`I'm ${this.age}`);
+  }
+}
+
+const mike = new Student("Mike Smith", 2012, "Biology");
+mike.greet();
+console.log(mike.age);
+
+mike.introduce();
+mike.calcAge();
