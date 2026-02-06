@@ -1,10 +1,8 @@
 "use strict";
 
-// float number precision
-let a = 0.1 + 0.2;
-console.log(a);
+// prompt
+let name = prompt("What is your name?");
+console.log(name);
 
-console.log(a.toFixed(2));
-
-console.log(0.1 * 0.2);
-console.log(0.3 - 0.1);
+let age = prompt("How old are you?");
+console.log(age);
