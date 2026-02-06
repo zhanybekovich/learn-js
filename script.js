@@ -1,14 +1,8 @@
 "use strict";
 
-// Using vars in math operations
-let a = 10;
-let b = 2;
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
+// priority of operations
+let a = 2 * 2 + 3;
+console.log(a);
 
-let c = 10;
-let d = 5;
-let result = c + d;
-console.log(result);
+a = (8 / 2) * 4;
+console.log(a);
