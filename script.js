@@ -1,18 +1,17 @@
 "use strict";
 
-// arrays
+// array indexes
+let letters = ["a", "b", "c", "d", "e"];
 
-// empty array
-let myArr = [];
+console.log(letters[0]);
+console.log(letters[1]);
 
-// array with string elements
-let myStrings = ["a", "b", "c"];
-console.log(myStrings);
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers[0]);
+console.log(numbers[1]);
 
-// array with numbers
-let myNumbers = [1, 2, 3, 4, 5];
-console.log(myNumbers);
+let arr = [1, 2, 3];
+console.log(arr[0] + arr[1] + arr[2]);
 
-// mixed array
-let mixArr = ["a", "b", true, false, 1, 2, 4.5, null];
-console.log(mixArr);
+arr = ["a", "b", "c", "d"];
+console.log(`${arr[0]}+${arr[1]}+${arr[2]}+${arr[3]}`);
