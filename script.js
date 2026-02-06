@@ -1,17 +1,9 @@
 "use strict";
 
-// convert to boolean
-// falsy values
-console.log(Boolean(0));
-console.log(Boolean(-0));
-console.log(Boolean(+0));
-console.log(Boolean(null));
-console.log(Boolean(false));
-console.log(Boolean(NaN));
-console.log(Boolean(undefined));
-console.log(Boolean(""));
+// string index
+let str = "abcde";
+console.log(str[0]);
+console.log(str[1]);
 
-// truthy
-console.log(Boolean("0"));
-console.log(Boolean("false"));
-console.log(Boolean(1));
+let index = 2;
+console.log(str[index]);
