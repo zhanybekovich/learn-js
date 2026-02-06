@@ -1,9 +1,8 @@
 "use strict";
 
-// convert to string
-let num = 123556;
-console.log(String(num).length);
+// convert boolean to string and number
+console.log(String(true));
+console.log(String(false));
 
-let a = 3435;
-let b = 456;
-console.log(String(a).length + String(b).length);
+console.log(Number(true));
+console.log(Number(false));
