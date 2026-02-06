@@ -1,22 +1,10 @@
 "use strict";
 
-// increment and decrement with post and prefix
-let n = 0;
-console.log(n++);
-console.log(n);
+// float number precision
+let a = 0.1 + 0.2;
+console.log(a);
 
-console.log("====");
+console.log(a.toFixed(2));
 
-n = 0;
-console.log(++n);
-console.log(n);
-
-console.log("===");
-n = 5;
-console.log(n--);
-console.log(n);
-
-console.log("==");
-n = 5;
-console.log(--n);
-console.log(n);
+console.log(0.1 * 0.2);
+console.log(0.3 - 0.1);
