@@ -1,8 +1,7 @@
 "use strict";
 
-// strings length
-let str = "abcde";
-console.log(str.length);
+// template string
+let str = "abc";
+let text = `This is: ${str}`;
 
-let myStr = "This is my string.";
-console.log(myStr.length);
+console.log(text);
