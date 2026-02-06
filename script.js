@@ -1,15 +1,14 @@
 "use strict";
 
-// Math operations
+// Using vars in math operations
+let a = 10;
+let b = 2;
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
 
-let a = 1 + 2;
-console.log(a);
-
-let b = 3 - 2;
-console.log(b);
-
-let c = 3 * 2;
-console.log(c);
-
-let d = 4 / 2;
-console.log(d);
+let c = 10;
+let d = 5;
+let result = c + d;
+console.log(result);
