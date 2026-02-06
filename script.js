@@ -1,6 +1,9 @@
 "use strict";
 
-// floating numbers
-let a = 1.5;
-let b = 0.75;
-console.log(a + b);
+// negative numbers
+let a = -1;
+console.log(a);
+
+a = -1;
+let b = -a;
+console.log(b);
