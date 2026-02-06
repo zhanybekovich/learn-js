@@ -1,8 +1,17 @@
 "use strict";
 
-// convert boolean to string and number
-console.log(String(true));
-console.log(String(false));
+// convert to boolean
+// falsy values
+console.log(Boolean(0));
+console.log(Boolean(-0));
+console.log(Boolean(+0));
+console.log(Boolean(null));
+console.log(Boolean(false));
+console.log(Boolean(NaN));
+console.log(Boolean(undefined));
+console.log(Boolean(""));
 
-console.log(Number(true));
-console.log(Number(false));
+// truthy
+console.log(Boolean("0"));
+console.log(Boolean("false"));
+console.log(Boolean(1));
