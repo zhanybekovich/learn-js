@@ -1,9 +1,11 @@
 "use strict";
-alert("Hello again!");
 
-// single line comment
+let a = 3;
+alert(a);
 
-/*
-Multiline
-comment goes here
-*/
+let b;
+b = 4;
+alert(b);
+
+let num = 123;
+alert(num);
