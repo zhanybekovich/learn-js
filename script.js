@@ -1,6 +1,6 @@
 "use strict";
 
-// const
-
-const pi = 3.14;
-console.log(pi);
+// convert to number
+let a = "10";
+let b = "20";
+console.log(Number(a) + Number(b));
