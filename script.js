@@ -1,21 +1,20 @@
 "use strict";
 
-// challenges
-let num1 = 1;
-let num2 = 2;
-console.log("сумма: " + (num1 + num2));
+// practice
+console.log(60 * 60 * 24);
 
-let a = 1;
-let b = 2;
-console.log(a + b);
+console.log(60 * 60 * 24 * 30);
 
-let num = "123";
-let sum = +num[0] + +num[1] + +num[2];
-console.log(sum);
+console.log(60 * 60 * 24 * 365);
 
-num = 123;
-num = String(num);
-console.log(num[0]);
+console.log(60 * 24);
 
-a = 0;
-console.log(++a);
+console.log(60 * 24 * 365);
+
+console.log(1024 * 1024);
+
+console.log(1024 * 1024 * 1024 * 10);
+
+console.log(1028 * 1024 * 1024 * 1024);
+
+console.log((1024 * 1024 * 1024 * 1024) / 1024);
