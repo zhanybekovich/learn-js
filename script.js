@@ -1,9 +1,7 @@
 "use strict";
 
-let a = 1,
-  b = 2,
-  c = 3;
-
+let a = 10;
 alert(a);
-alert(b);
-alert(c);
+
+a = 20;
+alert(a);
