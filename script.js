@@ -1,7 +1,13 @@
 "use strict";
 
-// strings
+// strings concatenation
 
 let firstName = "Mirlan";
 let lastName = "Urzhanov";
-console.log(firstName, lastName);
+let fullName = firstName + " " + lastName;
+console.log(fullName);
+
+let java = "java";
+let script = "script";
+let javascript = java + script;
+console.log(javascript);
