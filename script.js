@@ -1,8 +1,6 @@
 "use strict";
 
-// mannualy set priority by grouping operations
-let a = 2 * (2 + 3);
-console.log(a);
-
-a = 2 * (2 + 4 * (3 + 1));
-console.log(a);
+// floating numbers
+let a = 1.5;
+let b = 0.75;
+console.log(a + b);
