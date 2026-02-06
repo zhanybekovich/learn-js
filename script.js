@@ -1,5 +1,4 @@
 "use strict";
 
-// special value null
-let a = null;
-console.log(a);
+// special value NaN
+console.log("abc" * 3);
