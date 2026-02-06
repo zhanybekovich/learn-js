@@ -1,7 +1,10 @@
 "use strict";
 
-// prompt always returns string type
-let n = prompt("Enter your first number: ");
-let n2 = prompt("Enter the second number: ");
+// document write
+document.write("Hello");
+document.write("<i>Hello again!</i>");
 
-console.log(+n + +n2);
+let str = "John Doe";
+document.write(`<p>${str}</p>`);
+
+document.write("1 <br> 2 <br> 3 <br> 4 <br> 5 <br>");
