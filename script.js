@@ -1,11 +1,9 @@
 "use strict";
 
-let a = 3;
+let a = 1,
+  b = 2,
+  c = 3;
+
 alert(a);
-
-let b;
-b = 4;
 alert(b);
-
-let num = 123;
-alert(num);
+alert(c);
