@@ -1,8 +1,11 @@
 "use strict";
 
-// shorthand convert to number
-let a = +"10";
-let b = +"20";
-console.log(a + b);
+// convert to number
+let num = parseInt("12px");
+console.log(num);
 
-console.log(+"4" + +"30");
+let num2 = parseFloat("12.5px");
+console.log(num2);
+
+console.log(parseInt("5px") + parseInt("6px") + "px");
+console.log(parseFloat("5.5px") + parseFloat("6.25px") + "px");
