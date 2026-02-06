@@ -1,4 +1,5 @@
 "use strict";
 
-// special value NaN
-console.log("abc" * 3);
+// special value Infinity
+console.log(1 / 0);
+console.log(-1 / 0);
