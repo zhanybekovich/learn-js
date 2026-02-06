@@ -1,7 +1,18 @@
 "use strict";
 
-// challenges on indexes
-let a = "12345";
-console.log(+a[0] + +a[1] + +a[2] + +a[3] + +a[4]);
+// assignment operators
+let n = 1;
+n += 2;
+console.log(n);
 
-console.log(a[4] + a[3] + a[2] + a[1] + a[0]);
+n = 20;
+n -= 5;
+console.log(n);
+
+n = 2;
+n *= 2;
+console.log(n);
+
+n = 40;
+n /= 2;
+console.log(n);
