@@ -1,8 +1,7 @@
 "use strict";
 
-// prompt
-let name = prompt("What is your name?");
-console.log(name);
+// prompt always returns string type
+let n = prompt("Enter your first number: ");
+let n2 = prompt("Enter the second number: ");
 
-let age = prompt("How old are you?");
-console.log(age);
+console.log(+n + +n2);
