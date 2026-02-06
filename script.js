@@ -1,14 +1,10 @@
 "use strict";
 
-// remainder
-console.log(10 % 3);
-
-console.log(10 % 2);
+// exponentiation
+console.log(10 ** 3);
 
 let a = 10;
-let b = 3;
-console.log(a % b);
+let b = 4;
+console.log(a ** b);
 
-a = 13;
-b = 5;
-console.log(a % b);
+console.log(2 ** 10);
