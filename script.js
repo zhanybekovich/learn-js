@@ -1,9 +1,9 @@
 "use strict";
 
 // convert to string
-let str = String(123);
-console.log(str);
+let num = 123556;
+console.log(String(num).length);
 
-let a = 5;
-let b = 3;
-console.log(String(a) + String(b));
+let a = 3435;
+let b = 456;
+console.log(String(a).length + String(b).length);
