@@ -1,26 +1,18 @@
 "use strict";
 
-// practice 2
-let r = 20;
-let s = 3.14 * r ** 2;
+// arrays
 
-console.log(s);
+// empty array
+let myArr = [];
 
-let a = 20;
-s = a * a;
-console.log(s);
+// array with string elements
+let myStrings = ["a", "b", "c"];
+console.log(myStrings);
 
-a = 25;
-let b = 30;
-console.log(a * b);
+// array with numbers
+let myNumbers = [1, 2, 3, 4, 5];
+console.log(myNumbers);
 
-let p = 2 * (a + b);
-console.log(p);
-
-let tc = 0;
-let f = (tc * 9) / 5 + 32;
-console.log(f);
-
-let tf = 32;
-tc = ((tf - 32) * 5) / 9;
-console.log(tc);
+// mixed array
+let mixArr = ["a", "b", true, false, 1, 2, 4.5, null];
+console.log(mixArr);
