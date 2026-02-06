@@ -1,7 +1,12 @@
 "use strict";
 
-// template string
-let str = "abc";
-let text = `This is: ${str}`;
-
-console.log(text);
+// multiline string in template string
+let str = `this
+is 
+a 
+multiline
+string
+in
+template
+string`;
+console.log(str);
