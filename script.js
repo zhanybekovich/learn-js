@@ -1,11 +1,9 @@
 "use strict";
 
-// convert to number
-let num = parseInt("12px");
-console.log(num);
+// convert to string
+let str = String(123);
+console.log(str);
 
-let num2 = parseFloat("12.5px");
-console.log(num2);
-
-console.log(parseInt("5px") + parseInt("6px") + "px");
-console.log(parseFloat("5.5px") + parseFloat("6.25px") + "px");
+let a = 5;
+let b = 3;
+console.log(String(a) + String(b));
