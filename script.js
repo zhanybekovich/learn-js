@@ -1,5 +1,5 @@
 "use strict";
 
-// special value undefined
-let a;
+// special value null
+let a = null;
 console.log(a);
