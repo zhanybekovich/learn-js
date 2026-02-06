@@ -1,13 +1,8 @@
 "use strict";
 
-// strings concatenation
+// strings length
+let str = "abcde";
+console.log(str.length);
 
-let firstName = "Mirlan";
-let lastName = "Urzhanov";
-let fullName = firstName + " " + lastName;
-console.log(fullName);
-
-let java = "java";
-let script = "script";
-let javascript = java + script;
-console.log(javascript);
+let myStr = "This is my string.";
+console.log(myStr.length);
