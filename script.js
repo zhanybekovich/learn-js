@@ -1,10 +1,21 @@
 "use strict";
 
-// document write
-document.write("Hello");
-document.write("<i>Hello again!</i>");
+// challenges
+let num1 = 1;
+let num2 = 2;
+console.log("сумма: " + (num1 + num2));
 
-let str = "John Doe";
-document.write(`<p>${str}</p>`);
+let a = 1;
+let b = 2;
+console.log(a + b);
 
-document.write("1 <br> 2 <br> 3 <br> 4 <br> 5 <br>");
+let num = "123";
+let sum = +num[0] + +num[1] + +num[2];
+console.log(sum);
+
+num = 123;
+num = String(num);
+console.log(num[0]);
+
+a = 0;
+console.log(++a);
