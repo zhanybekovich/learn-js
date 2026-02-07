@@ -1,10 +1,9 @@
 "use strict";
 
-// get object keys
+// get the length of the object
 let user = {
   name: "John",
   surname: "Doe",
 };
 
-let userKeys = Object.keys(user);
-console.log(userKeys);
+console.log(Object.keys(user).length);
