@@ -1,8 +1,7 @@
 "use strict";
 
-// delete array elements
-let arr = ["a", "b", "c"];
-console.log(arr);
+// fix error practice
+let arr = [1, 2, 3, 4, 5];
+console.log(arr[arr.length - 1]);
 
-delete arr[1];
-console.log(arr);
+console.log(arr.length);
