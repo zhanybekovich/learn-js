@@ -1,17 +1,9 @@
 "use strict";
 
-// string equality
+// string and number equality
 
-let test = "abc";
-
-if (test == "abc") {
-  console.log("===");
+if ("3" == 3) {
+  console.log("==");
 } else {
-  ("!=");
-}
-
-if (test == "ABC") {
-  console.log("===");
-} else {
-  ("!=");
+  console.log("!=");
 }
