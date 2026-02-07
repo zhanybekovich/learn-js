@@ -1,19 +1,9 @@
 "use strict";
 
-// objects
-let obj = {
-  1: "January",
-  2: "February",
-  3: "March",
-  4: "April",
-  5: "May",
-  6: "June",
-  7: "July",
-  8: "August",
-  9: "September",
-  10: "October",
-  11: "November",
-  12: "December",
+// objects with string keys
+let user = {
+  name: "John",
+  surname: "Doe",
 };
 
-console.log(obj);
+console.log(user);
