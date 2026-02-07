@@ -1,7 +1,12 @@
 "use strict";
 
-// array length
+// change array elements
 let letters = ["a", "b", "c", "d", "e"];
+letters[0] = "!";
 
-console.log(letters.length);
-console.log(letters[letters.length - 1]);
+console.log(letters);
+
+letters[1] = 2;
+letters[2] = 3;
+
+console.log(letters);
