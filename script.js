@@ -1,9 +1,12 @@
 "use strict";
 
-// array push
-let arr = [];
-arr.push("a");
-console.log(arr);
+// variables as keys of arrays
+let arr = ["a", "b", "c"];
+let first = 0;
 
-arr.push("b");
-console.log(arr);
+console.log(arr[first]);
+
+let numbers = [1, 2, 3, 4, 5];
+let a = 2;
+let b = 3;
+console.log(numbers[a] + numbers[b]);
