@@ -1,22 +1,18 @@
 "use strict";
 
 // practice
-let str = "hello";
+let x = 492;
 
-if (str[0] == "a") {
-  console.log('starts with "a"');
-} else {
-  console.log('does not start with "a"');
-}
+let strX = String(x);
 
-if (str[str.length - 1] == "x") {
-  console.log('ends with "x"');
-} else {
-  console.log('does not end with "x"');
-}
+strX[strX.length - 1] == 0 ? console.log("Zero") : console.log("Not Zero");
 
-if (str[0] == "a" || str[0] == "b") {
-  console.log('starts with "a" or "b"');
-} else {
-  console.log('does not start with "a" or "b"');
-}
+let lastSymbol = strX[strX.length - 1];
+
+lastSymbol == "0" ||
+lastSymbol == 2 ||
+lastSymbol == 4 ||
+lastSymbol == 6 ||
+lastSymbol == 8
+  ? console.log("Even")
+  : console.log("Odd");
