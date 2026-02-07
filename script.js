@@ -1,15 +1,10 @@
 "use strict";
 
-// invert logical expressions
-let num = 5;
+// expressions with boolean values
 
-if (num > 0 && num < 5) {
-  console.log("++");
-} else {
-  console.log("--");
-}
+let test = true;
 
-if (!(num > 0 && num < 5)) {
+if (test === true) {
   console.log("+++");
 } else {
   console.log("---");
