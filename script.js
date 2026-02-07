@@ -1,19 +1,25 @@
 "use strict";
 
-// nested loop
+// practice
+let numbers = [];
 
-for (let i = 1; i <= 9; i++) {
-  for (let j = 1; j <= 3; j++) {
-    document.write(i);
+for (let i = 1; i <= 10; i++) {
+  numbers.push(i);
+}
+console.log(numbers);
+
+let x = [];
+for (let i = 1; i <= 10; i++) {
+  x.push("x");
+}
+console.log(x);
+
+let mixed = [1, -20, 34, 59, -2];
+let positive = [];
+
+for (let n of mixed) {
+  if (n > 0) {
+    positive.push(n);
   }
 }
-
-document.write("<br>");
-
-for (let i = 1; i <= 3; i++) {
-  for (let j = 1; j <= 3; j++) {
-    document.write(i);
-    document.write(j);
-    document.write(" ");
-  }
-}
+console.log(positive);
