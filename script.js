@@ -1,10 +1,11 @@
 "use strict";
 
-// delete
+// object type
 let user = {
   name: "John",
   surname: "Doe",
 };
 
-delete user.name;
-console.log(user);
+console.log(typeof user);
+
+console.log(typeof {});
