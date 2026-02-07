@@ -1,6 +1,6 @@
 "use strict";
 
-// && operator has higher priority over ||
+// grouping conditions
 
 let num = 3;
 
