@@ -1,34 +1,17 @@
 "use strict";
 
-// loops: while
+// loops: for
 
-let i = 1;
-
-while (i <= 100) {
+for (let i = 1; i <= 100; i++) {
   console.log(i);
-  i++;
 }
 
-i = 11;
+for (let i = 0; i < 100; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+}
 
-while (i <= 33) {
+for (let i = 100; i >= 0; i--) {
   console.log(i);
-  i++;
 }
-
-i = 100;
-
-while (i >= 1) {
-  console.log(i);
-  i--;
-}
-
-let n = 2;
-let count = 0;
-
-while (n <= 1000) {
-  n = n * 3;
-  count++;
-}
-
-console.log(count);
