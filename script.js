@@ -1,14 +1,22 @@
 "use strict";
 
-// scope in if else
+// practice
+let str = "hello";
 
-let age = 17;
-let adult;
-
-if (age >= 18) {
-  adult = true;
+if (str[0] == "a") {
+  console.log('starts with "a"');
 } else {
-  adult = false;
+  console.log('does not start with "a"');
 }
 
-console.log(adult);
+if (str[str.length - 1] == "x") {
+  console.log('ends with "x"');
+} else {
+  console.log('does not end with "x"');
+}
+
+if (str[0] == "a" || str[0] == "b") {
+  console.log('starts with "a" or "b"');
+} else {
+  console.log('does not start with "a" or "b"');
+}
