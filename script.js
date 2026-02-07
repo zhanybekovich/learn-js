@@ -1,7 +1,14 @@
 "use strict";
 
-// confirm
+// scope in if else
 
-let ok = confirm("Are you ready?");
+let age = 17;
+let adult;
 
-ok ? console.log("You ready!") : console.log("NOT READY");
+if (age >= 18) {
+  adult = true;
+} else {
+  adult = false;
+}
+
+console.log(adult);
