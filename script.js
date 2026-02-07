@@ -1,11 +1,17 @@
 "use strict";
 
-// compare variables
-let test1 = 10;
-let test2 = 2;
+// string equality
 
-if (test1 > test2) {
-  console.log(">>>");
+let test = "abc";
+
+if (test == "abc") {
+  console.log("===");
 } else {
-  console.log("<<<");
+  ("!=");
+}
+
+if (test == "ABC") {
+  console.log("===");
+} else {
+  ("!=");
 }
