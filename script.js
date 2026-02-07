@@ -1,6 +1,6 @@
 "use strict";
 
-// access keys
+// change object values
 let user = {
   name: "John",
   surname: "Doe",
@@ -9,12 +9,8 @@ let user = {
 console.log(user.name);
 console.log(user.surname);
 
-let date = {
-  year: 2025,
-  month: "January",
-  day: 25,
-};
+user.name = "Bob";
+user.surname = "Peterson";
 
-console.log(date.year);
-console.log(date.month);
-console.log(date.day);
+console.log(user.name);
+console.log(user.surname);
