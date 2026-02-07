@@ -1,8 +1,20 @@
 "use strict";
 
 // practice
-let x = 492;
+// let num1 = 1;
+// let num2 = 2;
 
-x % 2 === 0 ? console.log("Even") : console.log("Odd");
+// if (num1 + num2 === 3) {
+//   console.log("+++");
+// } else {
+//   console.log("---");
+// }
 
-x % 3 === 0 ? console.log("Can be divided") : console.log("Can not be divided");
+let num1 = "1";
+let num2 = "2";
+
+if (num1 + num2 === 3) {
+  console.log("+++");
+} else {
+  console.log("---");
+}
