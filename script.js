@@ -1,24 +1,30 @@
 "use strict";
 
 // practice
+let arr = [2, 5, 9, 3, 1, 4];
 let sum = 0;
-for (let i = 2; i <= 100; i++) {
-  if (i % 2 === 0) {
-    sum += i;
+
+for (let x of arr) {
+  sum += x;
+}
+console.log(sum);
+
+sum = 0;
+for (let x of arr) {
+  if (x % 2 === 0) {
+    sum += x;
   }
 }
 console.log(sum);
 
 sum = 0;
-for (let i = 1; i <= 99; i++) {
-  if (i % 2 !== 0) {
-    sum += i;
-  }
+for (let x of arr) {
+  sum += x * x;
 }
 console.log(sum);
 
-let product = 1;
-for (let i = 1; i <= 20; i++) {
-  product *= i;
+let res = 1;
+for (let x of arr) {
+  res *= x;
 }
-console.log(product);
+console.log(res);
