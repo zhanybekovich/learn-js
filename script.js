@@ -1,12 +1,9 @@
 "use strict";
 
-// change array elements
-let letters = ["a", "b", "c", "d", "e"];
-letters[0] = "!";
+// array push
+let arr = [];
+arr.push("a");
+console.log(arr);
 
-console.log(letters);
-
-letters[1] = 2;
-letters[2] = 3;
-
-console.log(letters);
+arr.push("b");
+console.log(arr);
