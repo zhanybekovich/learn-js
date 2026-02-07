@@ -1,10 +1,11 @@
 "use strict";
 
-// variable values as keys of the object
+// in operator
 let user = {
   name: "John",
   surname: "Doe",
 };
 
-let key = "name";
-console.log(user[key]);
+console.log("name" in user);
+console.log("surname" in user);
+console.log("email" in user);
