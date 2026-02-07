@@ -1,24 +1,14 @@
 "use strict";
 
-// else if
-let n = 5;
+// nested if else
 
-if (n == 1) {
-  console.log(1);
-} else if (n == 2) {
-  console.log(2);
-} else if (n == 3) {
-  console.log(3);
+let n = -2;
+if (n >= 0) {
+  if (n <= 5) {
+    console.log("less or = 5");
+  } else {
+    console.log("greater 5");
+  }
 } else {
-  console.log("Invalid value");
-}
-
-let day = 15;
-
-if (day <= 10) {
-  console.log("1st");
-} else if (day > 10 && day <= 20) {
-  console.log("2nd");
-} else if (day > 20) {
-  console.log("3rd");
+  console.log("less 0");
 }
