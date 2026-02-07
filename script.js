@@ -1,30 +1,31 @@
 "use strict";
 
 // practice
-let arr = [2, 5, 9, 3, 1, 4];
-let sum = 0;
+let str = "";
 
-for (let x of arr) {
-  sum += x;
+for (let i = 1; i <= 5; i++) {
+  str += "-";
 }
-console.log(sum);
+console.log(str);
 
-sum = 0;
-for (let x of arr) {
-  if (x % 2 === 0) {
-    sum += x;
+let numStr = "";
+for (let i = 1; i <= 9; i++) {
+  numStr += i;
+}
+console.log(numStr);
+
+numStr = "";
+for (let i = 9; i >= 1; i--) {
+  numStr += i;
+}
+console.log(numStr);
+
+str = "";
+for (let i = 1; i <= 9; i++) {
+  if (i === 1) {
+    str += `-${i}-`;
+  } else {
+    str += `${i}-`;
   }
 }
-console.log(sum);
-
-sum = 0;
-for (let x of arr) {
-  sum += x * x;
-}
-console.log(sum);
-
-let res = 1;
-for (let x of arr) {
-  res *= x;
-}
-console.log(res);
+console.log(str);
