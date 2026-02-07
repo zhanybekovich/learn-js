@@ -1,12 +1,6 @@
 "use strict";
 
-// arrays and objects are object types
-let arr = [1, 2, 3];
-let obj = { a: 1, b: 2 };
+// primitive types: string, number, boolean, null, undefined, symbol, bigint
 
-console.log(typeof arr);
-console.log(typeof obj);
-
-// array check
-console.log(Array.isArray(arr));
-console.log(Array.isArray(obj));
+let test = { x: 1, y: 2, z: 3 };
+console.log(test.x);
