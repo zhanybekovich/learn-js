@@ -1,7 +1,10 @@
 "use strict";
 
-// fix error practice
-let arr = [1, 2, 3, 4, 5];
-console.log(arr[arr.length - 1]);
+// objects
+let obj = {
+  1: 1,
+  2: 2,
+  3: 3,
+};
 
-console.log(arr.length);
+console.log(obj);
