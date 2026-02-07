@@ -1,11 +1,19 @@
 "use strict";
 
-// continue
+// nested loop
 
-for (let i = 1; i <= 100; i++) {
-  if (i % 2 === 0) {
-    console.log(i);
-  } else {
-    continue;
+for (let i = 1; i <= 9; i++) {
+  for (let j = 1; j <= 3; j++) {
+    document.write(i);
+  }
+}
+
+document.write("<br>");
+
+for (let i = 1; i <= 3; i++) {
+  for (let j = 1; j <= 3; j++) {
+    document.write(i);
+    document.write(j);
+    document.write(" ");
   }
 }
