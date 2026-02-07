@@ -1,36 +1,40 @@
 "use strict";
 
-// practice
-for (let i = 10; i <= 1000; i++) {
-  let str = String(i);
+// break
+let n = [1, 4, 2, -5, 9, 3, 2, 0, 2, 5];
+for (let x of n) {
+  if (x === 0) {
+    break;
+  }
 
-  console.log(str[0]);
+  console.log(x);
 }
 
-console.log("+++++++++++++");
+console.log("++++++");
+let sum = 0;
+for (let x of n) {
+  if (x < 0) {
+    break;
+  }
 
-for (let i = 10; i <= 1000; i++) {
-  let str = String(i);
-
-  console.log(+str[0] + +str[1]);
+  sum += x;
 }
+console.log(sum);
 
-console.log("+++++++++++++");
-
-for (let i = 10; i <= 1000; i++) {
-  let str = String(i);
-
-  if (str[0] == "1") {
-    console.log(str);
+console.log("++++++");
+for (let i = 0; i <= n.length - 1; i++) {
+  if (n[i] === 3) {
+    console.log(i);
   }
 }
 
-console.log("+++++++++++++");
+console.log("****");
+sum = 0;
 
-for (let i = 10; i <= 1000; i++) {
-  let str = String(i);
-
-  if (+str[0] + +str[1] === 5) {
-    console.log(str);
+for (let i = 1; i <= 100; i++) {
+  sum += i;
+  if (sum > 100) {
+    console.log(i);
+    break;
   }
 }
