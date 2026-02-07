@@ -1,31 +1,36 @@
 "use strict";
 
 // practice
-let str = "";
+for (let i = 10; i <= 1000; i++) {
+  let str = String(i);
 
-for (let i = 1; i <= 5; i++) {
-  str += "-";
+  console.log(str[0]);
 }
-console.log(str);
 
-let numStr = "";
-for (let i = 1; i <= 9; i++) {
-  numStr += i;
+console.log("+++++++++++++");
+
+for (let i = 10; i <= 1000; i++) {
+  let str = String(i);
+
+  console.log(+str[0] + +str[1]);
 }
-console.log(numStr);
 
-numStr = "";
-for (let i = 9; i >= 1; i--) {
-  numStr += i;
-}
-console.log(numStr);
+console.log("+++++++++++++");
 
-str = "";
-for (let i = 1; i <= 9; i++) {
-  if (i === 1) {
-    str += `-${i}-`;
-  } else {
-    str += `${i}-`;
+for (let i = 10; i <= 1000; i++) {
+  let str = String(i);
+
+  if (str[0] == "1") {
+    console.log(str);
   }
 }
-console.log(str);
+
+console.log("+++++++++++++");
+
+for (let i = 10; i <= 1000; i++) {
+  let str = String(i);
+
+  if (+str[0] + +str[1] === 5) {
+    console.log(str);
+  }
+}
