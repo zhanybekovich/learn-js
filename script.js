@@ -1,17 +1,25 @@
 "use strict";
 
-// loops: for
+// loops: for with arrays
 
-for (let i = 1; i <= 100; i++) {
-  console.log(i);
+let arr = [1, 2, 3, 4, 5];
+
+for (let i = 0; i <= arr.length - 1; i++) {
+  console.log(arr[i]);
 }
 
-for (let i = 0; i < 100; i++) {
-  if (i % 2 !== 0) {
-    console.log(i);
+for (let i = 0; i <= arr.length - 1; i++) {
+  if (i !== 0 && i !== arr.length - 1) {
+    console.log(arr[i]);
   }
 }
 
-for (let i = 100; i >= 0; i--) {
-  console.log(i);
+for (let i = arr.length - 1; i >= 0; i--) {
+  console.log(arr[i]);
+}
+
+arr = ["a", "b", "c", "d", "e"];
+
+for (let i = 0; i <= arr.length - 1; i++) {
+  console.log(arr[i]);
 }
