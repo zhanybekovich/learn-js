@@ -1,18 +1,24 @@
 "use strict";
 
-// loops: for with arrays
-
-let arr = [2, 5, 9, 15, 1, 4];
-
-for (let x of arr) {
-  if (x > 3 && x < 10) {
-    console.log(x);
+// practice
+let sum = 0;
+for (let i = 2; i <= 100; i++) {
+  if (i % 2 === 0) {
+    sum += i;
   }
 }
+console.log(sum);
 
-let obj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
-for (let key in obj) {
-  if (obj[key] % 2 !== 0) {
-    console.log(obj[key]);
+sum = 0;
+for (let i = 1; i <= 99; i++) {
+  if (i % 2 !== 0) {
+    sum += i;
   }
 }
+console.log(sum);
+
+let product = 1;
+for (let i = 1; i <= 20; i++) {
+  product *= i;
+}
+console.log(product);
