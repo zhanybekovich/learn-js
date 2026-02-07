@@ -1,8 +1,12 @@
 "use strict";
 
-// loops: for-of
-let letters = ["a", "b", "c", "d", "e"];
+// loops: for-in
+let user = {
+  name: "John",
+  email: "john@john.com",
+  city: "London",
+};
 
-for (let letter of letters) {
-  console.log(letter);
+for (let key in user) {
+  console.log(`${key}: ${user[key]}`);
 }
