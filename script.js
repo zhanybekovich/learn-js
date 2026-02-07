@@ -1,9 +1,17 @@
 "use strict";
 
-// strict not equality
+// logical AND
 
-if ("3" !== 3) {
-  console.log("==");
+let num = 30;
+
+if (num > 0 && num < 10) {
+  console.log("++");
 } else {
-  console.log("!=");
+  console.log("--");
+}
+
+if (num >= 10 && num <= 20) {
+  console.log("++");
+} else {
+  console.log("--");
 }
