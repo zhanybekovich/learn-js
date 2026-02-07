@@ -1,10 +1,10 @@
 "use strict";
 
-// expressions with boolean values
+// not operator
 
-let test = true;
+let test = false;
 
-if (test === true) {
+if (!test) {
   console.log("+++");
 } else {
   console.log("---");
