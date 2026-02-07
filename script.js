@@ -1,14 +1,20 @@
 "use strict";
 
-// nested if else
+// switch case
 
-let n = -2;
-if (n >= 0) {
-  if (n <= 5) {
-    console.log("less or = 5");
-  } else {
-    console.log("greater 5");
-  }
-} else {
-  console.log("less 0");
+let lang = "ru";
+
+switch (lang) {
+  case "ru":
+    console.log("rus");
+    break;
+  case "en":
+    console.log("eng");
+    break;
+  case "de":
+    console.log("deu");
+    break;
+  default:
+    console.log("lang not found");
+    break;
 }
