@@ -1,10 +1,7 @@
 "use strict";
 
-// ternary operator
+// confirm
 
-let n = 1;
-let res;
+let ok = confirm("Are you ready?");
 
-n >= 0 ? (res = "1") : (res = "2");
-
-console.log(res);
+ok ? console.log("You ready!") : console.log("NOT READY");
