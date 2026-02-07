@@ -1,25 +1,20 @@
 "use strict";
 
 // practice
-let numbers = [];
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers);
 
-for (let i = 1; i <= 10; i++) {
-  numbers.push(i);
+for (let i = 0; i <= numbers.length - 1; i++) {
+  numbers[i] = numbers[i] * numbers[i];
 }
 console.log(numbers);
 
-let x = [];
-for (let i = 1; i <= 10; i++) {
-  x.push("x");
+for (let i = 0; i <= numbers.length - 1; i++) {
+  numbers[i] -= 1;
 }
-console.log(x);
+console.log(numbers);
 
-let mixed = [1, -20, 34, 59, -2];
-let positive = [];
-
-for (let n of mixed) {
-  if (n > 0) {
-    positive.push(n);
-  }
+for (let i = 0; i <= numbers.length - 1; i++) {
+  numbers[i] += 10;
 }
-console.log(positive);
+console.log(numbers);
