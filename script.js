@@ -3,16 +3,6 @@
 // practice
 let x = 492;
 
-let strX = String(x);
+x % 2 === 0 ? console.log("Even") : console.log("Odd");
 
-strX[strX.length - 1] == 0 ? console.log("Zero") : console.log("Not Zero");
-
-let lastSymbol = strX[strX.length - 1];
-
-lastSymbol == "0" ||
-lastSymbol == 2 ||
-lastSymbol == 4 ||
-lastSymbol == 6 ||
-lastSymbol == 8
-  ? console.log("Even")
-  : console.log("Odd");
+x % 3 === 0 ? console.log("Can be divided") : console.log("Can not be divided");
