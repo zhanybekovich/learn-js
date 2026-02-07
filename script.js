@@ -1,14 +1,8 @@
 "use strict";
 
-// const can be changed
-const obj = { a: 1, b: 2, c: 3 };
-console.log(obj);
+// fix error challenges
+let obj = { x: 1, y: 2, z: 3 };
+console.log(obj["x"]);
 
-obj.a = 5;
-console.log(obj);
-
-const arr = [1, 2, 3];
-console.log(arr);
-
-arr[0] = 3000;
-console.log(arr);
+let key = "x";
+console.log(obj[key]);
