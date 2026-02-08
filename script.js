@@ -1,30 +1,10 @@
 "use strict";
 
 // practice
-let obj = {
-  1: {
-    1: 11,
-    2: 12,
-    3: 13,
-  },
-  2: {
-    1: 21,
-    2: 22,
-    3: 23,
-  },
-  3: {
-    1: 24,
-    2: 25,
-    3: 26,
-  },
+let students = {
+  group1: ["name11", "name12", "name13"],
+  group2: ["name21", "name22", "name23"],
+  group3: ["name31", "name32", "name33"],
 };
 
-let sum = 0;
-for (let key in obj) {
-  let subObj = obj[key];
-
-  for (let subKey in subObj) {
-    sum += subObj[subKey];
-  }
-}
-console.log(sum);
+console.log(students.group3[0]);
