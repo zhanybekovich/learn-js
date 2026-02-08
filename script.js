@@ -1,13 +1,10 @@
 "use strict";
 
 // practice
-let obj = { a: 10, b: 20, c: 30, d: 40, e: 50 };
-let sum = 0;
-
-for (let elem in obj) {
-  if (String(obj[elem])[0] === "1" || String(obj[elem])[0] === "2") {
-    sum += obj[elem];
-  }
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
 }
 
-console.log(sum);
+for (let i = 10; i >= 0; i--) {
+  console.log(i);
+}
