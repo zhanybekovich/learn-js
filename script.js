@@ -1,6 +1,8 @@
 "use strict";
 
-// array splice
+// array includes, find, indexOf, lastIndexOf
 let arr = [1, 2, 3, 4, 5];
-arr.splice(1, 2);
-console.log(arr);
+console.log(arr.includes(3));
+console.log(arr.find((n) => n === 3));
+console.log(arr.indexOf(3));
+console.log(arr.lastIndexOf(3));
