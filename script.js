@@ -1,37 +1,48 @@
 "use strict";
 
 // practice
-const arr = [];
-let count = 1;
-for (let i = 0; i < 4; i++) {
-  arr[i] = [];
-  for (let j = 0; j < 2; j++) {
-    arr[i].push(count++);
+let obj = {
+  key1: {
+    key1: 1,
+    key2: 2,
+    key3: 3,
+  },
+  key2: {
+    key1: 4,
+    key2: 5,
+    key3: 6,
+  },
+  key3: {
+    key1: 7,
+    key2: 8,
+    key3: 9,
+  },
+};
+let sum = 0;
+
+for (let key in obj) {
+  for (let sub in obj[key]) {
+    sum += obj[key][sub];
   }
 }
-console.log(arr);
+console.log(sum);
 
-const arr2 = [];
-count = 2;
-
-for (let i = 0; i < 4; i++) {
-  arr2[i] = [];
-  for (let j = 0; j < 3; j++) {
-    arr2[i].push(count);
-    count += 2;
-  }
-}
-console.log(arr2);
-
-const arr3 = [];
-count = 1;
-for (let i = 0; i < 2; i++) {
-  arr3[i] = [];
-  for (let j = 0; j < 2; j++) {
-    arr3[i][j] = [];
-    for (let k = 0; k < 2; k++) {
-      arr3[i][j].push(count++);
-    }
-  }
-}
-console.log(arr3);
+obj = {
+  1: {
+    1: "a1",
+    2: "a2",
+    3: "a3",
+  },
+  2: {
+    1: "b1",
+    2: "b2",
+    3: "b3",
+  },
+  3: {
+    1: "c1",
+    2: "c2",
+    3: "c3",
+  },
+};
+console.log(obj["2"]["2"]);
+console.log(obj["3"][1]);
