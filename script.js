@@ -1,15 +1,12 @@
 "use strict";
 
 // practice
-function func(n) {
-  let count = 0;
-
-  while (n >= 10) {
-    n = n / 2;
-    count++;
+function func(num1, num2) {
+  if (num1 > 0 && num2 > 0) {
+    return num1 * num2;
+  } else {
+    return num1 - num2;
   }
-
-  return count;
 }
 
-console.log(func(200));
+console.log(func(3, 4));
