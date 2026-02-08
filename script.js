@@ -1,9 +1,9 @@
 "use strict";
 
-// function with default param
-function func(n = 5) {
-  console.log(n * n);
+// return
+
+function calcCube(n) {
+  return Math.pow(n, 3);
 }
-func();
-func(2);
-func(3);
+
+console.log(calcCube(2));
