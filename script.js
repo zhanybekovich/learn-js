@@ -228,9 +228,9 @@
 // }
 // console.log(obj);
 
-let arr = ["a", "b", "c", "d", "e"];
-const obj = {};
-for (let i = 0; i <= arr.length - 1; i++) {
-  obj[arr[i]] = i + 1;
-}
-console.log(obj);
+// let arr = ["a", "b", "c", "d", "e"];
+// const obj = {};
+// for (let i = 0; i <= arr.length - 1; i++) {
+//   obj[arr[i]] = i + 1;
+// }
+// console.log(obj);
