@@ -1,14 +1,14 @@
 "use strict";
 
-// split, join
-let str = "1-2-3-4-5";
-let numbers = str.split("-");
-console.log(numbers);
+// shift, pop, push, unshift
+let arr = [1, 2, 3];
+arr.shift();
+console.log(arr);
 
-str = "12345";
-numbers = str.split("");
-console.log(numbers);
+console.log(arr.pop());
 
-let arr = [1, 2, 3, 4, 5];
-str = arr.join("-");
-console.log(str);
+arr.push(5);
+console.log(arr);
+
+arr.unshift(10);
+console.log(arr);
