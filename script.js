@@ -1,9 +1,7 @@
 "use strict";
 
-// toUpperCase, toLowerCase
-let str = "js";
-console.log(str.toLowerCase());
-console.log(str.toUpperCase());
-
-str = "JS";
-console.log(str.toLowerCase());
+// substr, substring, slice
+let str = "i study javascript";
+console.log(str.substr(2, 6));
+console.log(str.substring(2, 7));
+console.log(str.slice(2, 7));
