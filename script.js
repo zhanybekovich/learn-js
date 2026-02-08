@@ -1,8 +1,5 @@
 "use strict";
 
-// Math module
-console.log(Math.sqrt(379));
-console.log(Math.floor(Math.sqrt(379)));
-console.log(Math.ceil(Math.sqrt(379)));
-console.log(Math.sqrt(379).toFixed(1));
-console.log(Math.sqrt(379).toFixed(2));
+// Math max & min
+console.log(Math.max(4, -2, 5, 19, -130, 0, 10));
+console.log(Math.min(4, -2, 5, 19, -130, 0, 10));
