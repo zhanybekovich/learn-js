@@ -1,9 +1,12 @@
 "use strict";
 
-// return
-
-function calcCube(n) {
-  return Math.pow(n, 3);
+// sequential function calls
+function sqrt(num) {
+  return Math.sqrt(num);
 }
 
-console.log(calcCube(2));
+function round(num) {
+  return num.toFixed(3);
+}
+
+console.log(round(sqrt(2)));
