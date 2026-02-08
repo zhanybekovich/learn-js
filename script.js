@@ -2,16 +2,23 @@
 
 // multidimensional arrays
 let arr = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
+  [
+    [1, 2],
+    [3, 4],
+  ],
+  [
+    [5, 6],
+    [7, 8],
+  ],
 ];
 
 let sum = 0;
 
-for (let el of arr) {
-  for (let item of el) {
-    sum += item;
+for (let items of arr) {
+  for (let subitems of items) {
+    for (let subsubitem of subitems) {
+      sum += subsubitem;
+    }
   }
 }
 
