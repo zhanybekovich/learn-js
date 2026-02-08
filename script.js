@@ -1,7 +1,10 @@
 "use strict";
 
-// substr, substring, slice
-let str = "i study javascript";
-console.log(str.substr(2, 6));
-console.log(str.substring(2, 7));
-console.log(str.slice(2, 7));
+// includes, startsWith, endsWith, indexOf, lastIndexOf
+let str = "http://google.com";
+console.log(str.includes("http://"));
+console.log(str.startsWith("http"));
+console.log(str.endsWith("com"));
+
+console.log(str.indexOf("h"));
+console.log(str.lastIndexOf("t"));
