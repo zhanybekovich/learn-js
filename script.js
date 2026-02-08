@@ -1,16 +1,17 @@
 "use strict";
 
-// function
-
-function myName() {
-  console.log("Mirlan");
+// function with params
+function calcCube(n) {
+  console.log(Math.pow(n, 3));
 }
+calcCube(2);
 
-myName();
-
-function countToHundred() {
-  for (let i = 1; i <= 100; i++) {
-    console.log(i);
+function checkNumber(n) {
+  if (n > 0) {
+    console.log("+++");
+  } else {
+    console.log("---");
   }
 }
-countToHundred();
+checkNumber(3);
+checkNumber(-5);
