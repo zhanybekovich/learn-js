@@ -1,78 +1,28 @@
 "use strict";
 
 // practice
-// let employees = [
-//   {
-//     name: "name1",
-//     salary: 300,
-//   },
-//   {
-//     name: "name2",
-//     salary: 400,
-//   },
-//   {
-//     name: "name3",
-//     salary: 500,
-//   },
-// ];
-
-// for (let item of employees) {
-//   console.log(`${item.name} - ${item.salary}`);
-// }
-
-// let employees = [
-//   {
-//     name: "name1",
-//     salary: 300,
-//   },
-//   {
-//     name: "name2",
-//     salary: 400,
-//   },
-//   {
-//     name: "name3",
-//     salary: 500,
-//   },
-// ];
-// let sum = 0;
-
-// for (let item of employees) {
-//   sum += item.salary;
-// }
-// console.log(sum);
-
-let employees = [
-  {
-    name: "name1",
-    salary: 300,
-    age: 28,
+let affairs = {
+  2018: {
+    11: {
+      29: ["name111", "name112", "name113"],
+      30: ["name121", "name122", "name123"],
+    },
+    12: {
+      30: ["name211", "name212", "name213"],
+      31: ["name221", "name222", "name223"],
+    },
   },
-  {
-    name: "name2",
-    salary: 400,
-    age: 29,
+  2019: {
+    12: {
+      29: ["name311", "name312", "name313"],
+      30: ["name321", "name322", "name323"],
+      31: ["name331", "name332", "name333"],
+    },
   },
-  {
-    name: "name3",
-    salary: 500,
-    age: 30,
-  },
-  {
-    name: "name4",
-    salary: 600,
-    age: 31,
-  },
-  {
-    name: "name5",
-    salary: 700,
-    age: 32,
-  },
-];
-let sum = 0;
+};
 
-for (let item of employees) {
-  if (item.age >= 30) {
-    sum += item.salary;
-  }
-}
-console.log(sum);
+let year = 2019;
+let month = 12;
+let day = 29;
+
+console.log(affairs[year][month][day]);
