@@ -1,7 +1,11 @@
 "use strict";
 
-// Math random
-console.log(Math.random());
+// Math random practice
 
-// random in range 1 (including) to 5 (including)
-console.log(Math.floor(Math.random() * (5 - 1 + 1) + 1));
+console.log(Math.floor(Math.random() * (100 - 1 + 1) + 1));
+
+const randoms = [];
+for (let i = 0; i < 10; i++) {
+  randoms.push(Math.floor(Math.random() * 10));
+}
+console.log(randoms);
