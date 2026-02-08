@@ -2,22 +2,36 @@
 
 // practice
 const arr = [];
-for (let i = 0; i <= 2; i++) {
+let count = 1;
+for (let i = 0; i < 4; i++) {
   arr[i] = [];
-  for (let j = 1; j <= 5; j++) {
-    arr[i].push(j);
+  for (let j = 0; j < 2; j++) {
+    arr[i].push(count++);
   }
 }
 console.log(arr);
 
-let arr2 = [];
-for (let i = 0; i < 3; i++) {
+const arr2 = [];
+count = 2;
+
+for (let i = 0; i < 4; i++) {
   arr2[i] = [];
-  for (let j = 0; j < 2; j++) {
-    arr2[i][j] = [];
-    for (let k = 0; k < 5; k++) {
-      arr2[i][j].push(k + 1);
-    }
+  for (let j = 0; j < 3; j++) {
+    arr2[i].push(count);
+    count += 2;
   }
 }
 console.log(arr2);
+
+const arr3 = [];
+count = 1;
+for (let i = 0; i < 2; i++) {
+  arr3[i] = [];
+  for (let j = 0; j < 2; j++) {
+    arr3[i][j] = [];
+    for (let k = 0; k < 2; k++) {
+      arr3[i][j].push(count++);
+    }
+  }
+}
+console.log(arr3);
