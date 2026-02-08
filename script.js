@@ -1,14 +1,30 @@
 "use strict";
 
 // practice
-let obj = { x: 1, y: 2, z: 3 };
+let arr = ["a", "b", "c", "d", "e"];
+let flag = false;
 
-for (let key in obj) {
-  obj[key] = obj[key] * obj[key];
+for (let x of arr) {
+  if (x === "c") {
+    flag = true;
+    break;
+  }
 }
-console.log(obj);
 
-for (let key in obj) {
-  obj[key] = obj[key] + 1;
+flag ? console.log("+++") : console.log("---");
+
+let a = 5;
+let isSimple = true;
+
+if (a <= 1) {
+  isSimple = false;
+} else {
+  for (let i = 2; i * i <= a; i++) {
+    if (a % i === 0) {
+      isSimple = false;
+      break;
+    }
+  }
 }
-console.log(obj);
+
+console.log(isSimple ? "Simple" : "Not simple");
