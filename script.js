@@ -1,17 +1,9 @@
 "use strict";
 
-// function with params
-function calcCube(n) {
-  console.log(Math.pow(n, 3));
-}
-calcCube(2);
+// function with several params
 
-function checkNumber(n) {
-  if (n > 0) {
-    console.log("+++");
-  } else {
-    console.log("---");
-  }
+function calcSum(a, b, c) {
+  console.log(a + b + c);
 }
-checkNumber(3);
-checkNumber(-5);
+
+calcSum(1, 2, 3);
