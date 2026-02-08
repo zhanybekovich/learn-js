@@ -1,14 +1,9 @@
 "use strict";
 
-// practice
-
-function calcSum(a, b, c) {
-  console.log(a + b + c);
+// function with default param
+function func(n = 5) {
+  console.log(n * n);
 }
-
-calcSum(1, 2, 3);
-
-let param1 = 1;
-let param2 = 2;
-let param3 = 3;
-calcSum(param1, param2, param3);
+func();
+func(2);
+func(3);
