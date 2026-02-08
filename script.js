@@ -1,6 +1,16 @@
 "use strict";
 
-// practice
-let obj = { a: 1, b: 2, c: 3 };
-let keys = Object.keys(obj);
-console.log(keys);
+// function
+
+function myName() {
+  console.log("Mirlan");
+}
+
+myName();
+
+function countToHundred() {
+  for (let i = 1; i <= 100; i++) {
+    console.log(i);
+  }
+}
+countToHundred();
