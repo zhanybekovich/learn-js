@@ -1,25 +1,23 @@
 "use strict";
 
-// multidimensional arrays
-let arr = [
-  [
-    [1, 2],
-    [3, 4],
-  ],
-  [
-    [5, 6],
-    [7, 8],
-  ],
-];
+// practice
+const arr = [];
+for (let i = 0; i <= 2; i++) {
+  arr[i] = [];
+  for (let j = 1; j <= 5; j++) {
+    arr[i].push(j);
+  }
+}
+console.log(arr);
 
-let sum = 0;
-
-for (let items of arr) {
-  for (let subitems of items) {
-    for (let subsubitem of subitems) {
-      sum += subsubitem;
+let arr2 = [];
+for (let i = 0; i < 3; i++) {
+  arr2[i] = [];
+  for (let j = 0; j < 2; j++) {
+    arr2[i][j] = [];
+    for (let k = 0; k < 5; k++) {
+      arr2[i][j].push(k + 1);
     }
   }
 }
-
-console.log(sum);
+console.log(arr2);
