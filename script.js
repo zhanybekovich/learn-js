@@ -1,30 +1,12 @@
 "use strict";
 
 // practice
-let arr = ["a", "b", "c", "d", "e"];
-let flag = false;
+let arr = [10, 20, 30, 40, 21, 32, 51];
+let sum = 0;
 
-for (let x of arr) {
-  if (x === "c") {
-    flag = true;
-    break;
+for (let el of arr) {
+  if (String(el)[0] == 1 || String(el)[0] == 2) {
+    sum += el;
   }
 }
-
-flag ? console.log("+++") : console.log("---");
-
-let a = 5;
-let isSimple = true;
-
-if (a <= 1) {
-  isSimple = false;
-} else {
-  for (let i = 2; i * i <= a; i++) {
-    if (a % i === 0) {
-      isSimple = false;
-      break;
-    }
-  }
-}
-
-console.log(isSimple ? "Simple" : "Not simple");
+console.log(sum);
