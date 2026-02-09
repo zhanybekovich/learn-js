@@ -2,17 +2,18 @@
 
 // practice
 // 1
-const arr = [
-  function () {
+const obj = {
+  func1: function () {
     return 1;
   },
-  function () {
+  func2: function () {
     return 2;
   },
-  function () {
+  func3: function () {
     return 3;
   },
-];
-for (const func of arr) {
-  console.log(func());
+};
+
+for (const func in obj) {
+  console.log(obj[func]());
 }
