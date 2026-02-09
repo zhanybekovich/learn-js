@@ -1,7 +1,6 @@
 "use strict";
 
-// some
-// 1
-const numbers = [1, 9, 4, 6, 33];
-console.log(numbers.some((n) => n > 0));
-console.log(numbers.some((n, i) => n * i < 30));
+// reduce
+const arr = [1, 2, 3, 4, 5, 6];
+const sumOfArr = arr.reduce((sum, elem) => sum + elem, 0);
+console.log(sumOfArr);
