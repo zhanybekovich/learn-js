@@ -1,10 +1,8 @@
 "use strict";
 
-// functions are just like vars
-function func() {
-  console.log("!");
-}
+// function expression
+let func = function () {
+  console.log("Hello");
+};
 
-let test = func;
-test();
 func();
