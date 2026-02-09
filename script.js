@@ -1,5 +1,22 @@
 "use strict";
 
-// arrow function
-const sayHello = () => console.log("hello");
-sayHello();
+// closure
+function test() {
+  let num = 1;
+
+  return function () {
+    console.log(num);
+    num++;
+  };
+}
+
+let func = test();
+func();
+func();
+
+let anotherFunc = test();
+anotherFunc();
+anotherFunc();
+
+func();
+anotherFunc();
