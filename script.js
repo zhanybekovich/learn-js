@@ -1,12 +1,16 @@
 "use strict";
 
-// closure
+// closure practice
 function test() {
-  let num = 1;
+  let num = 3;
 
   return function () {
-    console.log(num);
-    num++;
+    if (num === 0) {
+      console.log("Countdown finished!");
+    } else {
+      console.log(num);
+      num--;
+    }
   };
 }
 
@@ -18,5 +22,9 @@ let anotherFunc = test();
 anotherFunc();
 anotherFunc();
 
+func();
+anotherFunc();
+
+func();
 func();
 anotherFunc();
