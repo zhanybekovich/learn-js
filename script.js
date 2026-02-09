@@ -1,8 +1,7 @@
 "use strict";
 
-// merge arrays with spread operator (ES6)
-const arr = [1, 2, 3, 4, 5];
-const arr2 = [6, 7, 8, 9, 10];
-const merged = [...arr, ...arr2];
+// split string with spread
+const str = "Hello";
+const letters = [...str];
 
-console.log(merged);
+console.log(letters);
