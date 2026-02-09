@@ -1,6 +1,10 @@
 "use strict";
 
-// reduceRight
-const arr = [1, 2, 3, 4, 5, 6];
-const sumOfArr = arr.reduceRight((sum, elem) => sum + elem, 0);
-console.log(sumOfArr);
+// spread operator (ES6)
+const arr = [1, 2, 3, 4, 5];
+
+function func(num1, num2, num3, num4, num5) {
+  return num1 + num2 + num3 + num4 + num5;
+}
+
+console.log(func(...arr));
