@@ -1,31 +1,16 @@
 "use strict";
 
-// function can be passed as params
-function test(func1, func2, func3) {
-  console.log(func1() + func2() + func3());
+// nested function
+function func(a, b) {
+  function square(n) {
+    return n * n;
+  }
+
+  function cube(n) {
+    return n * n * n;
+  }
+
+  return square(a) + cube(b);
 }
 
-function func1() {
-  return 1;
-}
-
-function func2() {
-  return 2;
-}
-
-function func3() {
-  return 3;
-}
-
-test(func1, func2, func3);
-test(
-  function () {
-    return 2;
-  },
-  function () {
-    return 2;
-  },
-  function () {
-    return 2;
-  },
-);
+console.log(func(2, 2));
