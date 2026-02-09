@@ -1,30 +1,31 @@
 "use strict";
 
-// practice
-// 1
-const math = {
-  sum: function (arr) {
-    let sum = 0;
-    for (let x of arr) {
-      sum += x;
-    }
-    return sum;
+// function can be passed as params
+function test(func1, func2, func3) {
+  console.log(func1() + func2() + func3());
+}
+
+function func1() {
+  return 1;
+}
+
+function func2() {
+  return 2;
+}
+
+function func3() {
+  return 3;
+}
+
+test(func1, func2, func3);
+test(
+  function () {
+    return 2;
   },
-  square: function (arr) {
-    let sum = 0;
-    for (let x of arr) {
-      sum += x * x;
-    }
-    return sum;
+  function () {
+    return 2;
   },
-  cube: function (arr) {
-    let sum = 0;
-    for (let x of arr) {
-      sum += x * x * x;
-    }
-    return sum;
+  function () {
+    return 2;
   },
-};
-console.log(math.sum([1, 2, 3]));
-console.log(math.square([1, 2, 3]));
-console.log(math.cube([1, 2, 3]));
+);
