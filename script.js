@@ -1,14 +1,14 @@
 "use strict";
 
 // recursion
-let i = 1;
-function func() {
-  console.log(i);
-  i++;
+let arr = [1, 2, 3, 4, 5];
 
-  if (i <= 10) {
-    func();
+function func(arr) {
+  console.log(arr.shift(), arr);
+
+  if (arr.length != 0) {
+    func(arr);
   }
 }
 
-func();
+func(arr);
