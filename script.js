@@ -1,36 +1,78 @@
 "use strict";
 
 // practice
-// function func1() {
-//   return 3;
-// }
-// function func2() {
-//   return 5;
-// }
+// 1
+function getDividers(n) {
+  const dividers = [];
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      dividers.push(i);
+    }
+  }
 
-// console.log(func1() + func2());
+  return dividers;
+}
+console.log(getDividers(12));
+console.log(getDividers(14));
 
-// function sum(arr) {
-//   let res = 0;
+// 2
+function getCommonDividers(a, b) {
+  const dividers = [];
+  for (let i = 1; i <= a; i++) {
+    if (a % i === 0 && b % i === 0) {
+      dividers.push(i);
+    }
+  }
 
-//   for (let elem of arr) {
-//     res += elem;
-//   }
+  return dividers;
+}
+console.log(getCommonDividers(4, 2));
 
-//   return res;
-// }
+// 3
+function calcSumOfDigits(n) {
+  let str = String(n);
+  let sum = 0;
+  for (let d of str) {
+    sum += +d;
+  }
 
-// console.log(sum([1, 2, 3, 4, 5]));
+  return sum;
+}
+console.log(calcSumOfDigits(12));
+console.log(calcSumOfDigits(1));
 
-// let arr = [1, 2, 3, 4, 5];
+// 4
+function getWeekDay(n) {
+  let day = "";
+  switch (n) {
+    case 1:
+      day = "monday";
+      break;
+    case 2:
+      day = "tuesday";
+      break;
+    case 3:
+      day = "wednesday";
+      break;
+    case 4:
+      day = "thursday";
+      break;
+    case 5:
+      day = "friday";
+      break;
+    case 6:
+      day = "saturday";
+      break;
+    case 7:
+      day = "sunday";
+      break;
+    default:
+      day = "unknown day";
+      break;
+  }
 
-// function func(arr) {
-//   let res = 0;
+  return day;
+}
+console.log(getWeekDay(3));
 
-//   for (let elem of arr) {
-//     res += elem;
-//   }
-
-//   return res;
-// }
-// console.log(func(arr));
+// 5
