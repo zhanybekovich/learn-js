@@ -1,8 +1,14 @@
 "use strict";
 
-// calculating time
-const now = new Date();
-const date = new Date(2015, 11, 4, 23);
+// DOM
 
-const diff = now.getTime() - date.getTime();
-console.log(diff);
+const button = document.querySelector("#button");
+console.log(button);
+
+const p1 = document.querySelector("#elem1");
+const p2 = document.querySelector("#elem2");
+const p3 = document.querySelector("#elem3");
+
+console.log(p1);
+console.log(p2);
+console.log(p3);
