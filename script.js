@@ -2,11 +2,19 @@
 
 // DOM
 
-const firstParagraph = document.querySelector("#block p:first-child");
-console.log(firstParagraph);
+const btn1 = document.querySelector("#button1");
+const btn2 = document.querySelector("#button2");
+const btn3 = document.querySelector("#button3");
 
-const firstParagraphFromClass = document.querySelector(".block p:first-child");
-console.log(firstParagraphFromClass);
+btn1.addEventListener("click", function () {
+  console.log(1);
+});
 
-const firstWWW = document.querySelector(".www");
-console.log(firstWWW);
+btn2.addEventListener("click", () => {
+  console.log(2);
+});
+
+function log3() {
+  console.log(3);
+}
+btn3.addEventListener("click", log3);
