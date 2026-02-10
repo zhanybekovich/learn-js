@@ -2,15 +2,26 @@
 
 // DOM
 const btn = document.querySelector("#btn");
+const p = document.querySelector("p");
 
-btn.addEventListener("dblclick", function () {
-  console.log("Hello");
+btn.addEventListener("click", function () {
+  console.log(p.textContent);
 });
 
-btn.addEventListener("mouseover", function () {
-  console.log("mouse over");
+const sumBtn = document.querySelector("#sum");
+const n1 = document.querySelector("#num1");
+const n2 = document.querySelector("#num2");
+const n3 = document.querySelector("#num3");
+const result = document.querySelector("#result");
+
+sumBtn.addEventListener("click", function () {
+  result.textContent =
+    Number(n1.textContent) + Number(n2.textContent) + Number(n3.textContent);
 });
 
-btn.addEventListener("mouseout", function () {
-  console.log("mouse out");
+const textP = document.querySelector(".text");
+const addExBtn = document.querySelector("#addExclamation");
+
+addExBtn.addEventListener("click", function () {
+  textP.textContent += "!";
 });
