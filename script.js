@@ -1,20 +1,16 @@
 "use strict";
 
 // DOM
-const p1 = document.querySelector("#elem");
+const btn = document.querySelector("#btn");
 
-function func1() {
-  console.log("1");
-}
+btn.addEventListener("dblclick", function () {
+  console.log("Hello");
+});
 
-function func2() {
-  console.log("2");
-}
+btn.addEventListener("mouseover", function () {
+  console.log("mouse over");
+});
 
-function func3() {
-  console.log("3");
-}
-
-p1.addEventListener("click", func1);
-p1.addEventListener("click", func2);
-p1.addEventListener("click", func3);
+btn.addEventListener("mouseout", function () {
+  console.log("mouse out");
+});
