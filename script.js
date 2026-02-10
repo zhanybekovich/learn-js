@@ -1,11 +1,27 @@
 "use strict";
 
-// default value in object destructuring
-const options = {
-  color: "red",
-  width: 400,
-  height: 500,
-};
+// Date object
 
-const { color, width, height, zIndex = 10 } = options;
-console.log(color, width, height, zIndex);
+const date = new Date();
+console.log(date);
+
+// year
+console.log(date.getFullYear());
+
+// month
+console.log(date.getMonth());
+
+// day of month
+console.log(date.getDate());
+
+// day of the week
+console.log(date.getDay());
+
+// hours
+console.log(date.getHours());
+
+// minutes
+console.log(date.getMinutes());
+
+// seconds
+console.log(date.getSeconds());
