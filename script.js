@@ -2,13 +2,11 @@
 
 // DOM
 
-const button = document.querySelector("#button");
-console.log(button);
+const firstParagraph = document.querySelector("#block p:first-child");
+console.log(firstParagraph);
 
-const p1 = document.querySelector("#elem1");
-const p2 = document.querySelector("#elem2");
-const p3 = document.querySelector("#elem3");
+const firstParagraphFromClass = document.querySelector(".block p:first-child");
+console.log(firstParagraphFromClass);
 
-console.log(p1);
-console.log(p2);
-console.log(p3);
+const firstWWW = document.querySelector(".www");
+console.log(firstWWW);
