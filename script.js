@@ -1,6 +1,8 @@
 "use strict";
 
-// timestamp
-const date = new Date(2021, 0, 1);
-console.log(date);
-console.log(date.getTime());
+// calculating time
+const now = new Date();
+const date = new Date(2015, 11, 4, 23);
+
+const diff = now.getTime() - date.getTime();
+console.log(diff);
