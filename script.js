@@ -1,11 +1,11 @@
 "use strict";
 
-// object destructuring
+// change var name in object destructuring
 const options = {
   color: "red",
   width: 400,
   height: 500,
 };
 
-const { color, width, height } = options;
-console.log(color, width, height);
+const { color: c, width: w, height: h } = options;
+console.log(c, w, h);
