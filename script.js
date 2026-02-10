@@ -1,7 +1,11 @@
 "use strict";
 
-// split string with spread
-const str = "Hello";
-const letters = [...str];
+// rest operator
+function calcAverage(...nums) {
+  return nums.reduce((sum, n) => sum + n, 0);
+}
 
-console.log(letters);
+console.log(calcAverage(1));
+console.log(calcAverage(1, 2));
+console.log(calcAverage(1, 2, 3));
+console.log(calcAverage(1, 2, 3, 4));
