@@ -1,8 +1,9 @@
 "use strict";
 
-// skipping in array destructuring
-
+// rest of array
 const arr = ["John", "Smit", "development", "programmer", 2000];
-const [, , department, position] = arr;
 
-console.log(department, position);
+const [name, surname, ...info] = arr;
+
+console.log(name, surname);
+console.log(info);
