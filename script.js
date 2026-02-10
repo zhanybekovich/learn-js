@@ -1,20 +1,18 @@
 "use strict";
 
 // DOM
+const p1 = document.querySelector("#elem1");
+const p2 = document.querySelector("#elem2");
+const p3 = document.querySelector("#elem3");
+const p4 = document.querySelector("#elem4");
+const p5 = document.querySelector("#elem5");
 
-const btn1 = document.querySelector("#button1");
-const btn2 = document.querySelector("#button2");
-const btn3 = document.querySelector("#button3");
-
-btn1.addEventListener("click", function () {
-  console.log(1);
-});
-
-btn2.addEventListener("click", () => {
-  console.log(2);
-});
-
-function log3() {
-  console.log(3);
+function func() {
+  console.log("message");
 }
-btn3.addEventListener("click", log3);
+
+p1.addEventListener("click", func);
+p2.addEventListener("click", func);
+p3.addEventListener("click", func);
+p4.addEventListener("click", func);
+p5.addEventListener("click", func);
