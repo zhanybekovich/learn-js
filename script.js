@@ -1,9 +1,11 @@
 "use strict";
 
-// rest of array
-const arr = ["John", "Smit", "development", "programmer", 2000];
+// object destructuring
+const options = {
+  color: "red",
+  width: 400,
+  height: 500,
+};
 
-const [name, surname, ...info] = arr;
-
-console.log(name, surname);
-console.log(info);
+const { color, width, height } = options;
+console.log(color, width, height);
