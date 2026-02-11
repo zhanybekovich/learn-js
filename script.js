@@ -1,15 +1,10 @@
 "use strict";
 
 // data attributes
-const setDataBtn = document.querySelector("#set-data");
-const readDataBtn = document.querySelector("#read-data");
+const input = document.querySelector("input");
 
-setDataBtn.addEventListener("click", function () {
-  let currentCount = Number(setDataBtn.dataset.clicks);
-  currentCount++;
-  setDataBtn.dataset.clicks = currentCount;
-});
-
-readDataBtn.addEventListener("click", function () {
-  readDataBtn.textContent = ` ${setDataBtn.dataset.clicks}`;
+input.addEventListener("blur", function () {
+  if (this.value.length < this.dataset.length) {
+    console.log(`Enter minimum ${this.dataset.length} symbols`);
+  }
 });
