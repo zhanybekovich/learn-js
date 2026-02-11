@@ -1,23 +1,11 @@
 "use strict";
 
 // DOM
-const input = document.querySelector("#input");
+console.log(document.querySelector("#elem").className);
 
-input.addEventListener("focus", function () {
-  input.value = 1;
-});
-
-input.addEventListener("blur", function () {
-  input.value = 2;
-});
-
-const numInput = document.querySelector("#num");
-
-numInput.addEventListener("blur", function () {
-  console.log(Number(numInput.value) * Number(numInput.value));
-});
-
-const inputWithText = document.querySelector("#withText");
-inputWithText.addEventListener("blur", () => {
-  inputWithText.value = "";
+const div = document.querySelector("#elem");
+const divWithClasses = document.querySelector("#manyClasses");
+document.querySelector("#addClass").addEventListener("click", () => {
+  div.className = "text";
+  console.log(divWithClasses.className.split(" "));
 });
