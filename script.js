@@ -1,4 +1,4 @@
 "use strict";
 
-// removeAttribute
-document.querySelector("input").removeAttribute("value");
+// hasAttribute
+console.log(document.querySelector("input").hasAttribute("value"));
