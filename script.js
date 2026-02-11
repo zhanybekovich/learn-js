@@ -1,11 +1,18 @@
 "use strict";
 
-// DOM
-console.log(document.querySelector("#elem").className);
+// this
 
-const div = document.querySelector("#elem");
-const divWithClasses = document.querySelector("#manyClasses");
-document.querySelector("#addClass").addEventListener("click", () => {
-  div.className = "text";
-  console.log(divWithClasses.className.split(" "));
+const elem = document.querySelector("#elem");
+
+function func() {
+  console.log(this.value);
+}
+
+elem.addEventListener("blur", func);
+
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", function () {
+  let current = Number(this.textContent);
+  this.textContent = current + 1;
 });
