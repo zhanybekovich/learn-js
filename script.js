@@ -2,4 +2,4 @@
 
 // classList
 
-document.querySelector("p").classList.add("xxx");
+document.querySelector("p").classList.remove("zzz");
