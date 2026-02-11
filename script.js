@@ -1,19 +1,19 @@
 "use strict";
 
-// this
+// querySelectorAll
+const paragraphs = document.querySelectorAll("p");
+const btn = document.querySelector("button");
 
-const p1 = document.querySelector("#text-1");
-const p2 = document.querySelector("#text-2");
-const p3 = document.querySelector("#text-3");
-const p4 = document.querySelector("#text-4");
-const p5 = document.querySelector("#text-5");
+btn.addEventListener("click", function () {
+  paragraphs.forEach((item, index) => (item.textContent += index));
+});
 
-function func() {
-  this.textContent += "!";
-}
+const inputs = document.querySelectorAll("input");
+const sumBtn = document.querySelector("#get-sum");
+const resultP = document.querySelector("#result");
 
-p1.addEventListener("click", func);
-p2.addEventListener("click", func);
-p3.addEventListener("click", func);
-p4.addEventListener("click", func);
-p5.addEventListener("click", func);
+sumBtn.addEventListener("click", function () {
+  let sum = 0;
+  inputs.forEach((n) => (sum += Number(n.value)));
+  resultP.textContent = sum;
+});
