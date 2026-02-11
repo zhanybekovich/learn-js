@@ -1,13 +1,13 @@
 "use strict";
 
-// style
-const btn = document.querySelector("button");
-const div = document.querySelector("div");
+// firstElementChild, lastElementChild, children
+const firstLi = document.querySelector("ul").firstElementChild;
+const lastLi = document.querySelector("ul").lastElementChild;
+const items = document.querySelector("ul").children;
 
-btn.addEventListener("click", function () {
-  div.style.width = "300px";
-  div.style.height = "300px";
-  div.style.border = "1px solid blue";
-  div.style.margin = "30px 0";
-  div.style.backgroundColor = "green";
+firstLi.style.color = "red";
+lastLi.textContent += "!";
+
+[...items].forEach((element) => {
+  element.textContent += "*";
 });
