@@ -1,8 +1,10 @@
 "use strict";
 
 // data attributes
-const div = document.querySelector("#elem");
+const divs = document.querySelectorAll("div");
 
-div.addEventListener("click", function () {
-  div.textContent += div.dataset.text;
-});
+divs.forEach((item) =>
+  item.addEventListener("click", function () {
+    item.textContent += item.dataset.num;
+  }),
+);
