@@ -2,4 +2,4 @@
 
 // classList
 
-document.querySelector("p").classList.remove("zzz");
+console.log(document.querySelector("p").classList.contains("zzz"));
