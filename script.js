@@ -1,8 +1,7 @@
 "use strict";
 
-// previousElementSibling nextElementSibling
+// getElementById
 
-const elem = document.querySelector("#elem");
+const elem = document.getElementById("elem");
 
-elem.previousElementSibling.textContent += "!";
-elem.nextElementSibling.textContent += "*";
+elem.textContent = "Hello!";
