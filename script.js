@@ -1,7 +1,7 @@
 "use strict";
 
-// parentElement
+// closest
 
-const elem = document.querySelector("#elem");
+const div = document.querySelector("div");
 
-elem.parentElement.style.color = "blue";
+console.log(div.closest("header"));
