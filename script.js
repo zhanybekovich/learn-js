@@ -1,5 +1,5 @@
 "use strict";
 
-// getAttribute
-console.log(document.querySelector("input").getAttribute("value"));
-console.log(document.querySelector("input").getAttribute("class"));
+// setAttribute
+document.querySelector("input").setAttribute("value", "text");
+document.querySelector("input").setAttribute("class", "valid");
