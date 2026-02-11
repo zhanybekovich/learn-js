@@ -1,15 +1,27 @@
 "use strict";
 
 // DOM
-const p = document.querySelector("p");
-const readHTMLBtn = document.querySelector("#btn1");
-const makeCursiveBtn = document.querySelector("#btn2");
+const textP = document.querySelector("p");
+console.log(textP.id);
 
-readHTMLBtn.addEventListener("click", function () {
-  console.log(p.innerHTML);
+const input = document.querySelector("input");
+console.log(input.id);
+console.log(input.type);
+
+// change attribute
+input.type = "submit";
+input.value = "Send";
+
+const link = document.querySelector("a");
+const showHrefBtn = document.querySelector("#showHref");
+
+showHrefBtn.addEventListener("click", function () {
+  link.textContent = `(${link.href})`;
 });
 
-makeCursiveBtn.addEventListener("click", function () {
-  const text = p.textContent;
-  p.innerHTML = `<i>${text}</i>`;
+const img = document.querySelector("img");
+const changeSizeBtn = document.querySelector("#changeSize");
+
+changeSizeBtn.addEventListener("click", function () {
+  img.width = 200;
 });
