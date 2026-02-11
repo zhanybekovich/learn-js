@@ -2,17 +2,18 @@
 
 // this
 
-const elem = document.querySelector("#elem");
+const p1 = document.querySelector("#text-1");
+const p2 = document.querySelector("#text-2");
+const p3 = document.querySelector("#text-3");
+const p4 = document.querySelector("#text-4");
+const p5 = document.querySelector("#text-5");
 
 function func() {
-  console.log(this.value);
+  this.textContent += "!";
 }
 
-elem.addEventListener("blur", func);
-
-const btn = document.querySelector("button");
-
-btn.addEventListener("click", function () {
-  let current = Number(this.textContent);
-  this.textContent = current + 1;
-});
+p1.addEventListener("click", func);
+p2.addEventListener("click", func);
+p3.addEventListener("click", func);
+p4.addEventListener("click", func);
+p5.addEventListener("click", func);
