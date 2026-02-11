@@ -1,10 +1,15 @@
 "use strict";
 
 // data attributes
-const divs = document.querySelectorAll("div");
+const setDataBtn = document.querySelector("#set-data");
+const readDataBtn = document.querySelector("#read-data");
 
-divs.forEach((item) =>
-  item.addEventListener("click", function () {
-    item.textContent += item.dataset.num;
-  }),
-);
+setDataBtn.addEventListener("click", function () {
+  let currentCount = Number(setDataBtn.dataset.clicks);
+  currentCount++;
+  setDataBtn.dataset.clicks = currentCount;
+});
+
+readDataBtn.addEventListener("click", function () {
+  readDataBtn.textContent = ` ${setDataBtn.dataset.clicks}`;
+});
