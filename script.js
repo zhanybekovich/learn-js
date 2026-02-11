@@ -1,7 +1,8 @@
 "use strict";
 
-// closest
+// previousElementSibling nextElementSibling
 
-const div = document.querySelector("div");
+const elem = document.querySelector("#elem");
 
-console.log(div.closest("header"));
+elem.previousElementSibling.textContent += "!";
+elem.nextElementSibling.textContent += "*";
