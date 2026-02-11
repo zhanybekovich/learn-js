@@ -1,13 +1,7 @@
 "use strict";
 
-// firstElementChild, lastElementChild, children
-const firstLi = document.querySelector("ul").firstElementChild;
-const lastLi = document.querySelector("ul").lastElementChild;
-const items = document.querySelector("ul").children;
+// parentElement
 
-firstLi.style.color = "red";
-lastLi.textContent += "!";
+const elem = document.querySelector("#elem");
 
-[...items].forEach((element) => {
-  element.textContent += "*";
-});
+elem.parentElement.style.color = "blue";
