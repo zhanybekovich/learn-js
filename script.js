@@ -1,14 +1,14 @@
 "use strict";
 
-// disabled input
-const checkbox = document.querySelector("input");
-const checkBtn = document.querySelector("#check");
-const uncheckBtn = document.querySelector("#uncheck");
+// radio
+const radios = document.querySelectorAll("input");
+const btn = document.querySelector("button");
+const p = document.querySelector("p");
 
-checkBtn.addEventListener("click", () => {
-  checkbox.checked = true;
-});
-
-uncheckBtn.addEventListener("click", () => {
-  checkbox.checked = false;
+btn.addEventListener("click", function () {
+  for (let radio of radios) {
+    if (radio.checked) {
+      p.textContent = radio.value;
+    }
+  }
 });
