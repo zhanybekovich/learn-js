@@ -1,6 +1,6 @@
 "use strict";
 
-// querySelectorAll vs etElementsByTagName
+// querySelectorAll vs getElementsByClassName
 
 // returns NodeList
 const items = document.querySelectorAll(".www");
