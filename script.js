@@ -1,9 +1,14 @@
 "use strict";
 
 // disabled input
-const input = document.querySelector("input");
-const btn = document.querySelector("button");
+const checkbox = document.querySelector("input");
+const checkBtn = document.querySelector("#check");
+const uncheckBtn = document.querySelector("#uncheck");
 
-btn.addEventListener("click", () => {
-  input.disabled = false;
+checkBtn.addEventListener("click", () => {
+  checkbox.checked = true;
+});
+
+uncheckBtn.addEventListener("click", () => {
+  checkbox.checked = false;
 });
