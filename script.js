@@ -1,13 +1,10 @@
 "use strict";
 
-// querySelectorAll vs getElementsByClassName
+// childNodes
+const elem = document.querySelector("#elem");
 
-// returns NodeList
-const items = document.querySelectorAll(".www");
-console.log(items);
-items.forEach((item) => (item.style.color = "green"));
+console.log(elem.childNodes);
 
-// returns HTMLCollection
-const items2 = document.getElementsByClassName("www");
-console.log(items2);
-[...items2].forEach((item) => (item.style.color = "blue"));
+for (let item of elem.childNodes) {
+  console.log(item);
+}
