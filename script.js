@@ -1,10 +1,9 @@
 "use strict";
 
-// textarea
-const elem = document.querySelector("#elem");
+// disabled input
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-console.log(elem.value);
-
-elem.addEventListener("blur", function () {
-  document.querySelector("p").textContent = this.value;
+btn.addEventListener("click", () => {
+  input.disabled = false;
 });
