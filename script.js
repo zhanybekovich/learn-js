@@ -5,5 +5,7 @@ const input = document.querySelector("input");
 const p = document.querySelector("p");
 
 input.addEventListener("change", function () {
-  console.log(this.value);
+  if (this.value.length < 5) {
+    this.style.border = "1px solid blue";
+  }
 });
