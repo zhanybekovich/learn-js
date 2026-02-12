@@ -1,17 +1,17 @@
 "use strict";
 
-// input event
-const input = document.querySelector("input");
-const p = document.querySelector("p");
+// focus, blur
+const input1 = document.querySelector("#elem1");
+const input2 = document.querySelector("#elem2");
 
-const limit = 5;
+input1.addEventListener("input", function () {
+  if (this.value.length === 2) {
+    input2.focus();
+  }
+});
 
-input.addEventListener("input", function () {
-  const len = this.value.length;
-
-  if (len <= limit) {
-    p.textContent = `Left: ${limit - len}`;
-  } else {
-    p.textContent = `Exceeding: ${len - limit}`;
+input2.addEventListener("input", function () {
+  if (this.value.length === 2) {
+    this.blur();
   }
 });
