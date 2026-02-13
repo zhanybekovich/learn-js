@@ -1,9 +1,8 @@
 "use strict";
 
-// matches
+// contains
 
-const elem = document.querySelector("div");
+const elem = document.querySelector("#elem1");
+const elem2 = document.querySelector("#elem2");
 
-console.log(elem.matches("#elem"));
-console.log(elem.matches("div.www"));
-console.log(elem.matches("div"));
+console.log(elem.contains(elem2));
