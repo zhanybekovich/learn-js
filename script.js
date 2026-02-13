@@ -1,14 +1,11 @@
 "use strict";
 
-// append, prepend
+// insertBefore
 
 const ul = document.querySelector("ul");
+const before = ul.querySelector("#elem");
 
-const start = document.createElement("li");
-start.textContent = "start";
+const li = document.createElement("li");
+li.textContent = "New";
 
-const finish = document.createElement("li");
-finish.textContent = "finish";
-
-ul.prepend(start);
-ul.append(finish);
+ul.insertBefore(li, before);
