@@ -1,17 +1,10 @@
 "use strict";
 
-// focus, blur
-const input1 = document.querySelector("#elem1");
-const input2 = document.querySelector("#elem2");
+// working with select
+const select = document.querySelector("#select");
+const btn = document.querySelector("button");
+const p = document.querySelector("p");
 
-input1.addEventListener("input", function () {
-  if (this.value.length === 2) {
-    input2.focus();
-  }
-});
-
-input2.addEventListener("input", function () {
-  if (this.value.length === 2) {
-    this.blur();
-  }
+btn.addEventListener("click", function () {
+  p.textContent = select.value;
 });
