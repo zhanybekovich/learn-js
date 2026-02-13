@@ -2,6 +2,8 @@
 
 // working with select
 const select = document.querySelector("select");
-const currentMonth = new Date().getMonth();
+const input = document.querySelector("input");
 
-select.value = currentMonth + 1;
+input.addEventListener("blur", function () {
+  select.value = this.value;
+});
