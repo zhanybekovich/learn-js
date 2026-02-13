@@ -1,6 +1,9 @@
 "use strict";
 
 // event object
-document.querySelector("button").addEventListener("click", function (event) {
-  console.log(event);
+const p = document.querySelector("p");
+const page = document.querySelector(".page");
+document.addEventListener("mousemove", function (e) {
+  p.textContent = `${e.clientX} : ${e.clientY}`;
+  page.textContent = `${e.pageX} : ${e.pageY}`;
 });
