@@ -1,6 +1,8 @@
 "use strict";
 
-// event object
-document.querySelector("button").addEventListener("click", function (e) {
-  console.log(e.target);
+// keypress
+const input = document.querySelector("input");
+
+input.addEventListener("keypress", function (e) {
+  console.log(e.key);
 });
