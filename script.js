@@ -1,9 +1,16 @@
 "use strict";
 
 // event object
-const p = document.querySelector("p");
-const page = document.querySelector(".page");
-document.addEventListener("mousemove", function (e) {
-  p.textContent = `${e.clientX} : ${e.clientY}`;
-  page.textContent = `${e.pageX} : ${e.pageY}`;
-});
+const elem = document.querySelector("#elem");
+elem.addEventListener("click", func);
+elem.addEventListener("dblclick", func);
+
+function func(e) {
+  if (e.type === "click") {
+    elem.style.background = "green";
+  }
+
+  if (e.type === "dblclick") {
+    elem.style.background = "blue";
+  }
+}
