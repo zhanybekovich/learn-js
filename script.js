@@ -1,7 +1,13 @@
 "use strict";
 
-// setInterval
+// clearInterval
 
-let i = 100;
+let i = 3;
 
-setInterval(() => console.log(--i), 1000);
+let timer = setInterval(() => {
+  console.log(--i);
+
+  if (i <= 0) {
+    clearInterval(timer);
+  }
+}, 1000);
