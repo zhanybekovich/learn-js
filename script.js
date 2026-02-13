@@ -2,12 +2,14 @@
 
 // clearInterval
 
-let i = 3;
+const button = document.querySelector("button");
+const p = document.querySelector("p");
 
-let timer = setInterval(() => {
-  console.log(--i);
+button.addEventListener("click", function () {
+  let i = +p.textContent;
 
-  if (i <= 0) {
-    clearInterval(timer);
-  }
-}, 1000);
+  setInterval(function () {
+    i--;
+    p.textContent = i;
+  }, 1000);
+});
