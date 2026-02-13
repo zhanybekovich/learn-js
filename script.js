@@ -1,11 +1,12 @@
 "use strict";
 
-// insertAdjacentElement
+// cloneNode
 
-const target = document.querySelector("div");
+const input = document.querySelector("input");
+const button = document.querySelector("button");
 
-const p = document.createElement("p");
-p.textContent = "!!!!";
+button.addEventListener("click", function () {
+  const clone = input.cloneNode(true);
 
-target.insertAdjacentElement("beforebegin", p);
-target.insertAdjacentElement("afterend", p);
+  document.body.appendChild(clone);
+});
