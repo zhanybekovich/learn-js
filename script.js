@@ -1,16 +1,12 @@
 "use strict";
 
 // event bubbling
-let elem1 = document.querySelector("#elem1");
-let elem2 = document.querySelector("#elem2");
-let elem3 = document.querySelector("#elem3");
+const div = document.querySelector("div");
 
-elem1.addEventListener("click", function () {
-  console.log("зеленый");
-});
-elem2.addEventListener("click", function () {
-  console.log("голубой");
-});
-elem3.addEventListener("click", function () {
-  console.log("красный");
+div.addEventListener("click", function (e) {
+  console.log(e.target.tagName);
+
+  if (e.target.tagName === "LI") {
+    e.target.textContent += "!";
+  }
 });
