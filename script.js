@@ -2,7 +2,19 @@
 
 // contains
 
-const elem = document.querySelector("#elem1");
-const elem2 = document.querySelector("#elem2");
+const names = ["john", "pete", "marry", "bob"];
 
-console.log(elem.contains(elem2));
+const ul = document.querySelector("ul");
+
+names.forEach((item) => {
+  const li = document.createElement("li");
+  li.textContent = item;
+
+  li.addEventListener("click", function addExclamation() {
+    this.textContent += "!";
+
+    this.removeEventListener("click", addExclamation);
+  });
+
+  ul.appendChild(li);
+});
