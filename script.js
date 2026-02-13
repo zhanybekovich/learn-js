@@ -1,11 +1,11 @@
 "use strict";
 
-// insertBefore
+// insertAdjacentElement
 
-const ul = document.querySelector("ul");
-const before = ul.querySelector("#elem");
+const target = document.querySelector("div");
 
-const li = document.createElement("li");
-li.textContent = "New";
+const p = document.createElement("p");
+p.textContent = "!!!!";
 
-ul.insertBefore(li, before);
+target.insertAdjacentElement("beforebegin", p);
+target.insertAdjacentElement("afterend", p);
