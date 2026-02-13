@@ -1,11 +1,14 @@
 "use strict";
 
-// remove
+// append, prepend
 
-const items = document.querySelectorAll("li");
+const ul = document.querySelector("ul");
 
-items.forEach((element) => {
-  element.addEventListener("click", function () {
-    this.remove();
-  });
-});
+const start = document.createElement("li");
+start.textContent = "start";
+
+const finish = document.createElement("li");
+finish.textContent = "finish";
+
+ul.prepend(start);
+ul.append(finish);
