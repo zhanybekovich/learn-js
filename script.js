@@ -5,7 +5,7 @@
 const table = document.querySelector("table");
 table.border = "1";
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i <= 10; i++) {
   let tr = document.createElement("tr");
 
   for (let i = 0; i <= 5; i++) {
