@@ -1,12 +1,9 @@
 "use strict";
 
-// cloneNode
+// matches
 
-const input = document.querySelector("input");
-const button = document.querySelector("button");
+const elem = document.querySelector("div");
 
-button.addEventListener("click", function () {
-  const clone = input.cloneNode(true);
-
-  document.body.appendChild(clone);
-});
+console.log(elem.matches("#elem"));
+console.log(elem.matches("div.www"));
+console.log(elem.matches("div"));
