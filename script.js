@@ -1,19 +1,10 @@
 "use strict";
 
-// setTimeout
+// createElement, appendChild
 
-const p = document.querySelector("p");
+const parent = document.querySelector("#parent");
 
-let i = 0;
-function timer() {
-  setTimeout(() => {
-    i++;
-    p.textContent = i;
+const p = document.createElement("p");
+p.textContent = "!";
 
-    if (i < 10) {
-      timer();
-    }
-  }, 1000);
-}
-
-timer();
+parent.appendChild(p);
