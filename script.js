@@ -4,8 +4,8 @@
 const input = document.querySelector("input");
 const p = document.querySelector("p");
 
-input.addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
-    p.textContent = this.value;
+p.addEventListener("click", function (e) {
+  if (e.altKey) {
+    this.style.border = "2px solid green";
   }
 });
