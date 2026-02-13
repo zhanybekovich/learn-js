@@ -2,19 +2,17 @@
 
 // contains
 
-const names = ["john", "pete", "marry", "bob"];
+const table = document.querySelector("table");
+table.border = "1";
 
-const ul = document.querySelector("ul");
+for (let i = 0; i <= 5; i++) {
+  let tr = document.createElement("tr");
 
-names.forEach((item) => {
-  const li = document.createElement("li");
-  li.textContent = item;
+  for (let i = 0; i <= 5; i++) {
+    let td = document.createElement("td");
+    td.textContent = "Item";
+    tr.appendChild(td);
+  }
 
-  li.addEventListener("click", function addExclamation() {
-    this.textContent += "!";
-
-    this.removeEventListener("click", addExclamation);
-  });
-
-  ul.appendChild(li);
-});
+  table.appendChild(tr);
+}
