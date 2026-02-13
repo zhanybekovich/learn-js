@@ -2,6 +2,6 @@
 
 // setInterval
 
-setInterval(function () {
-  console.log("Hello");
-}, 3000);
+let i = 100;
+
+setInterval(() => console.log(--i), 1000);
