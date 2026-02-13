@@ -1,13 +1,11 @@
 "use strict";
 
-// createElement, appendChild
+// remove
 
-const parent = document.querySelector("#parent");
-const btn = document.querySelector("button");
+const items = document.querySelectorAll("li");
 
-for (let i = 1; i <= 10; i++) {
-  const li = document.createElement("li");
-  li.textContent = `Item - ${i}`;
-
-  parent.appendChild(li);
-}
+items.forEach((element) => {
+  element.addEventListener("click", function () {
+    this.remove();
+  });
+});
