@@ -3,8 +3,10 @@
 // createElement, appendChild
 
 const parent = document.querySelector("#parent");
+const btn = document.querySelector("button");
 
-const p = document.createElement("p");
-p.textContent = "!";
-
-parent.appendChild(p);
+btn.addEventListener("click", () => {
+  const li = document.createElement("li");
+  li.textContent = "Item";
+  parent.appendChild(li);
+});
