@@ -1,11 +1,6 @@
 "use strict";
 
-const input = document.querySelector("input");
+const p = document.querySelector("p");
 
-input.addEventListener("blur", function () {
-  if (this.value.length < 9) {
-    this.dataset.type = "error";
-  } else {
-    this.dataset.type = "success";
-  }
-});
+console.log(p.clientHeight);
+console.log(p.clientWidth);
