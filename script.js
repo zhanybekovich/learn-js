@@ -2,5 +2,5 @@
 
 const p = document.querySelector("p");
 
-console.log(p.clientHeight);
-console.log(p.clientWidth);
+console.log(p.offsetWidth);
+console.log(p.offsetHeight);
