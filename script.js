@@ -1,10 +1,13 @@
 "use strict";
 
 const div = document.querySelector("div");
-const btn = document.querySelector("button");
+const hide = document.querySelector("#hide");
+const show = document.querySelector("#show");
 
-btn.addEventListener("click", () => {
-  console.log(div.style.borderWidth);
-  console.log(div.style.borderStyle);
-  console.log(div.style.borderColor);
+hide.addEventListener("click", () => {
+  div.style.display = "none";
+});
+
+show.addEventListener("click", () => {
+  div.style.display = "block";
 });
