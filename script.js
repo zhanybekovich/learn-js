@@ -1,13 +1,11 @@
 "use strict";
 
 const div = document.querySelector("div");
-const hide = document.querySelector("#style");
-const show = document.querySelector("#remove-color");
+const btn = document.querySelector("#style");
 
-hide.addEventListener("click", () => {
-  div.style.cssText = `
-    width: 100px;
-    height: 100px;
-    background-color: green;
-  `;
+btn.addEventListener("click", () => {
+  const computedStyle = getComputedStyle(div);
+  console.log(computedStyle);
+  console.log(computedStyle.backgroundColor);
+  console.log(computedStyle.width);
 });
