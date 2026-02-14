@@ -1,11 +1,11 @@
 "use strict";
 
-const div = document.querySelector("div");
-const btn = document.querySelector("#style");
+const elems = document.querySelectorAll("p");
 
-btn.addEventListener("click", () => {
-  const computedStyle = getComputedStyle(div);
-  console.log(computedStyle);
-  console.log(computedStyle.backgroundColor);
-  console.log(computedStyle.width);
+elems.forEach((p, i) => {
+  if (i % 2 === 0) {
+    p.style.backgroundColor = "red";
+  } else {
+    p.style.backgroundColor = "green";
+  }
 });
