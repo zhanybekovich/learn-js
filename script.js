@@ -1,10 +1,10 @@
 "use strict";
 
-// create calculator that returns area and perimeter of square
+const div = document.querySelector("div");
+const btn = document.querySelector("button");
 
-function calcAreaAndPerimeter(a) {
-  console.log(`Area: ${a * a}`);
-  console.log(`Perimeter: ${a * 4}`);
-}
-
-calcAreaAndPerimeter(2);
+btn.addEventListener("click", () => {
+  div.style.width = "400px";
+  div.style.height = "300px";
+  div.style.border = "1px solid blue";
+});
