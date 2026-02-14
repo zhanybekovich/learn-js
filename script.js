@@ -1,13 +1,13 @@
 "use strict";
 
 const div = document.querySelector("div");
-const hide = document.querySelector("#hide");
-const show = document.querySelector("#show");
+const hide = document.querySelector("#color");
+const show = document.querySelector("#remove-color");
 
 hide.addEventListener("click", () => {
-  div.style.display = "none";
+  div.style.backgroundColor = "red";
 });
 
 show.addEventListener("click", () => {
-  div.style.display = "block";
+  div.style.backgroundColor = "initial";
 });
