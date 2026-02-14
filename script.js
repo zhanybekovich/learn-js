@@ -2,5 +2,5 @@
 
 const p = document.querySelector("p");
 
-console.log(p.scrollWidth);
-console.log(p.scrollHeight);
+console.log(p.scrollTop);
+console.log(p.scrollLeft);
