@@ -8,14 +8,15 @@ const rows = document.querySelector("#rows");
 const button = document.querySelector("button");
 
 table.border = "1";
-
+let count = 1;
 button.addEventListener("click", function () {
   for (let row = 1; row <= +rows.value; row++) {
     const tr = document.createElement("tr");
 
     for (let col = 1; col <= +columns.value; col++) {
       const td = document.createElement("td");
-      td.textContent = "Item";
+      td.textContent = count;
+      count++;
 
       tr.appendChild(td);
     }
