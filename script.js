@@ -1,11 +1,13 @@
 "use strict";
 
-const elems = document.querySelectorAll("p");
+const input = document.querySelector("input");
 
-elems.forEach((p, i) => {
-  if (i % 2 === 0) {
-    p.style.backgroundColor = "red";
+input.addEventListener("blur", function () {
+  console.log(this);
+  if (this.value.length < 9) {
+    this.classList.add("error");
   } else {
-    p.style.backgroundColor = "green";
+    this.classList.remove("error");
+    this.classList.add("success");
   }
 });
