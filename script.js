@@ -1,10 +1,10 @@
 "use strict";
 
 // practice
-const btns = document.querySelectorAll("button");
+const items = document.querySelectorAll("li");
 
-btns.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.target.previousElementSibling.classList.toggle("hide");
+items.forEach((item) => {
+  item.addEventListener("click", function () {
+    item.classList.toggle("active");
   });
 });
